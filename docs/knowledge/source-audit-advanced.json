@@ -1,0 +1,1634 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "deliverable": "docs/knowledge/advanced-handbook.md",
+  "publication_status": "public_original_handbook_available; advanced_playable_branches_not_implemented",
+  "scope_note": "Inventory and prior review evidence cover the full source family. Current round is explicit targeted rereading, not a second full-text or full-visual review. Character offsets are Python Unicode offsets within the split page text or converted file.",
+  "source_family_counts": {
+    "advertising_pdfs": 44,
+    "advertising_pdf_pages": 514,
+    "valid_office_documents": 3,
+    "office_hyperlink_placeholders": 1,
+    "saved_html_files": 4,
+    "html_mislabeled_duplicate_files": 1,
+    "html_nonduplicate_bodies": 3
+  },
+  "historical_full_native_text_review": {
+    "date": "2026-10-17",
+    "pdf_files": 44,
+    "pdf_pages": 514,
+    "evidence_groups": [
+      {
+        "id": "REVIEW-PDF-01",
+        "source_ids": "AD-001 to AD-014",
+        "pages": 181
+      },
+      {
+        "id": "REVIEW-PDF-02",
+        "source_ids": "AD-015 to AD-029",
+        "pages": 206
+      },
+      {
+        "id": "REVIEW-PDF-03",
+        "source_ids": "AD-030 to AD-044",
+        "pages": 127
+      }
+    ],
+    "status": "existing review records inspected; originals not visually revalidated"
+  },
+  "current_round_totals": {
+    "pdf_files_targeted": 44,
+    "distinct_pdf_pages_with_read_text": 51,
+    "fully_reread_native_page_texts": 15,
+    "native_pdf_characters_reread": 43794,
+    "office_or_html_files_targeted_including_placeholder": 8,
+    "full_pdf_visual_pages_checked": 0
+  },
+  "pdf_records": [
+    {
+      "id": "AD-001",
+      "archive_locator": "private/extracted/ads-library/AD-001.md",
+      "topic": "RAG",
+      "pages_in_inventory": 35,
+      "page_markers_verified": 35,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 35,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 694,
+          "page_text_characters": 694,
+          "mode": "full_native_page"
+        },
+        {
+          "page": 10,
+          "character_start": 0,
+          "character_end_exclusive": 2298,
+          "page_text_characters": 2298,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        17
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-002",
+      "archive_locator": "private/extracted/ads-library/AD-002.md",
+      "topic": "incrementality",
+      "pages_in_inventory": 7,
+      "page_markers_verified": 7,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 7,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 738,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        1,
+        3,
+        4,
+        10
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-003",
+      "archive_locator": "private/extracted/ads-library/AD-003.md",
+      "topic": "AI evaluation",
+      "pages_in_inventory": 22,
+      "page_markers_verified": 22,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 22,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 911,
+          "page_text_characters": 911,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        20
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-004",
+      "archive_locator": "private/extracted/ads-library/AD-004.md",
+      "topic": "SQL performance",
+      "pages_in_inventory": 8,
+      "page_markers_verified": 8,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 8,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1459,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        18,
+        21
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-005",
+      "archive_locator": "private/extracted/ads-library/AD-005.md",
+      "topic": "experimental sensitivity",
+      "pages_in_inventory": 18,
+      "page_markers_verified": 18,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 18,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1313,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        5,
+        6
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-006",
+      "archive_locator": "private/extracted/ads-library/AD-006.md",
+      "topic": "random assignment",
+      "pages_in_inventory": 15,
+      "page_markers_verified": 15,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 15,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1037,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        4,
+        7
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-007",
+      "archive_locator": "private/extracted/ads-library/AD-007.md",
+      "topic": "hash assignment",
+      "pages_in_inventory": 5,
+      "page_markers_verified": 5,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 5,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1816,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        7
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-008",
+      "archive_locator": "private/extracted/ads-library/AD-008.md",
+      "topic": "interleaving",
+      "pages_in_inventory": 9,
+      "page_markers_verified": 9,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 9,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1295,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        7
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-009",
+      "archive_locator": "private/extracted/ads-library/AD-009.md",
+      "topic": "bandit allocation",
+      "pages_in_inventory": 9,
+      "page_markers_verified": 9,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 9,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1055,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        7
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-010",
+      "archive_locator": "private/extracted/ads-library/AD-010.md",
+      "topic": "surrogate metrics",
+      "pages_in_inventory": 8,
+      "page_markers_verified": 8,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 8,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1402,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        6
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-011",
+      "archive_locator": "private/extracted/ads-library/AD-011.md",
+      "topic": "attribution measurement",
+      "pages_in_inventory": 13,
+      "page_markers_verified": 13,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 13,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 997,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        1
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-012",
+      "archive_locator": "private/extracted/ads-library/AD-012.md",
+      "topic": "cost diagnosis",
+      "pages_in_inventory": 12,
+      "page_markers_verified": 12,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 12,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1865,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        2,
+        15
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-013",
+      "archive_locator": "private/extracted/ads-library/AD-013.md",
+      "topic": "attribution workflow",
+      "pages_in_inventory": 11,
+      "page_markers_verified": 11,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 11,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1058,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        1,
+        18
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-014",
+      "archive_locator": "private/extracted/ads-library/AD-014.md",
+      "topic": "anomaly detection",
+      "pages_in_inventory": 9,
+      "page_markers_verified": 9,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 9,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1241,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        2
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-015",
+      "archive_locator": "private/extracted/ads-library/AD-015.md",
+      "topic": "metric decomposition",
+      "pages_in_inventory": 5,
+      "page_markers_verified": 5,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 5,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 658,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        2
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-016",
+      "archive_locator": "private/extracted/ads-library/AD-016.md",
+      "topic": "AI assisted diagnosis",
+      "pages_in_inventory": 4,
+      "page_markers_verified": 4,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 4,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 678,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        2,
+        20
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-017",
+      "archive_locator": "private/extracted/ads-library/AD-017.md",
+      "topic": "Text2SQL",
+      "pages_in_inventory": 18,
+      "page_markers_verified": 18,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 18,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 880,
+          "page_text_characters": 880,
+          "mode": "full_native_page"
+        },
+        {
+          "page": 7,
+          "character_start": 0,
+          "character_end_exclusive": 1000,
+          "page_text_characters": 1000,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        18
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-018",
+      "archive_locator": "private/extracted/ads-library/AD-018.md",
+      "topic": "causal analysis automation",
+      "pages_in_inventory": 9,
+      "page_markers_verified": 9,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 9,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 915,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        8,
+        19,
+        20
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-019",
+      "archive_locator": "private/extracted/ads-library/AD-019.md",
+      "topic": "variance reduction",
+      "pages_in_inventory": 8,
+      "page_markers_verified": 8,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 8,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 952,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        6
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-020",
+      "archive_locator": "private/extracted/ads-library/AD-020.md",
+      "topic": "AB fundamentals",
+      "pages_in_inventory": 6,
+      "page_markers_verified": 6,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 6,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1276,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        4,
+        5
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-021",
+      "archive_locator": "private/extracted/ads-library/AD-021.md",
+      "topic": "experiment quality",
+      "pages_in_inventory": 17,
+      "page_markers_verified": 17,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 17,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1450,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        4,
+        5,
+        7
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-022",
+      "archive_locator": "private/extracted/ads-library/AD-022.md",
+      "topic": "causal methods and uplift",
+      "pages_in_inventory": 27,
+      "page_markers_verified": 27,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 27,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1952,
+          "mode": "native_page_prefix"
+        },
+        {
+          "page": 9,
+          "character_start": 0,
+          "character_end_exclusive": 2175,
+          "page_text_characters": 2175,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        3,
+        8,
+        9,
+        10,
+        12
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-023",
+      "archive_locator": "private/extracted/ads-library/AD-023.md",
+      "topic": "causal identification methods",
+      "pages_in_inventory": 21,
+      "page_markers_verified": 21,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 21,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 933,
+          "page_text_characters": 933,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        3,
+        8,
+        9,
+        12
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-024",
+      "archive_locator": "private/extracted/ads-library/AD-024.md",
+      "topic": "causal assumptions",
+      "pages_in_inventory": 6,
+      "page_markers_verified": 6,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 6,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1274,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        3
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-025",
+      "archive_locator": "private/extracted/ads-library/AD-025.md",
+      "topic": "growth causal analysis",
+      "pages_in_inventory": 22,
+      "page_markers_verified": 22,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 22,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1091,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        3,
+        9,
+        10
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-026",
+      "archive_locator": "private/extracted/ads-library/AD-026.md",
+      "topic": "experiment infrastructure",
+      "pages_in_inventory": 23,
+      "page_markers_verified": 23,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 23,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 682,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        4,
+        7,
+        11,
+        21
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-027",
+      "archive_locator": "private/extracted/ads-library/AD-027.md",
+      "topic": "multiobjective allocation",
+      "pages_in_inventory": 12,
+      "page_markers_verified": 12,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 12,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 926,
+          "page_text_characters": 926,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        16
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-028",
+      "archive_locator": "private/extracted/ads-library/AD-028.md",
+      "topic": "auction and bidding",
+      "pages_in_inventory": 11,
+      "page_markers_verified": 11,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 11,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1638,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        13,
+        14,
+        15
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-029",
+      "archive_locator": "private/extracted/ads-library/AD-029.md",
+      "topic": "multistage ranking",
+      "pages_in_inventory": 17,
+      "page_markers_verified": 17,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 17,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1440,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        14,
+        16
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-030",
+      "archive_locator": "private/extracted/ads-library/AD-030.md",
+      "topic": "budget contracts",
+      "pages_in_inventory": 6,
+      "page_markers_verified": 6,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 6,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 725,
+          "page_text_characters": 725,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        15
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-031",
+      "archive_locator": "private/extracted/ads-library/AD-031.md",
+      "topic": "budget and accounting",
+      "pages_in_inventory": 7,
+      "page_markers_verified": 7,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 7,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 593,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        15
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-032",
+      "archive_locator": "private/extracted/ads-library/AD-032.md",
+      "topic": "market interference",
+      "pages_in_inventory": 8,
+      "page_markers_verified": 8,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 8,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 950,
+          "mode": "full_native_page"
+        },
+        {
+          "page": 3,
+          "character_start": 0,
+          "character_end_exclusive": 1056,
+          "page_text_characters": 1056,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        11
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-033",
+      "archive_locator": "private/extracted/ads-library/AD-033.md",
+      "topic": "crossed market design",
+      "pages_in_inventory": 5,
+      "page_markers_verified": 5,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 5,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1412,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        11
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-034",
+      "archive_locator": "private/extracted/ads-library/AD-034.md",
+      "topic": "production agents",
+      "pages_in_inventory": 30,
+      "page_markers_verified": 30,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 30,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1485,
+          "mode": "native_page_prefix"
+        },
+        {
+          "page": 14,
+          "character_start": 0,
+          "character_end_exclusive": 1479,
+          "page_text_characters": 1479,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        19,
+        20,
+        21
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-035",
+      "archive_locator": "private/extracted/ads-library/AD-035.md",
+      "topic": "causal benchmarks",
+      "pages_in_inventory": 3,
+      "page_markers_verified": 3,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 3,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 2190,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        12
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-036",
+      "archive_locator": "private/extracted/ads-library/AD-036.md",
+      "topic": "intervention versus prediction",
+      "pages_in_inventory": 4,
+      "page_markers_verified": 4,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 4,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1437,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        3
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-037",
+      "archive_locator": "private/extracted/ads-library/AD-037.md",
+      "topic": "potential outcomes",
+      "pages_in_inventory": 7,
+      "page_markers_verified": 7,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 7,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1569,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        3,
+        8
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-038",
+      "archive_locator": "private/extracted/ads-library/AD-038.md",
+      "topic": "propensity weighting",
+      "pages_in_inventory": 5,
+      "page_markers_verified": 5,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 5,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1184,
+          "mode": "native_page_prefix"
+        },
+        {
+          "page": 3,
+          "character_start": 0,
+          "character_end_exclusive": 2256,
+          "page_text_characters": 2256,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        8
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-039",
+      "archive_locator": "private/extracted/ads-library/AD-039.md",
+      "topic": "sensitivity and causal graphs",
+      "pages_in_inventory": 6,
+      "page_markers_verified": 6,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 6,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 936,
+          "page_text_characters": 936,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        9,
+        12
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-040",
+      "archive_locator": "private/extracted/ads-library/AD-040.md",
+      "topic": "BART foundations",
+      "pages_in_inventory": 7,
+      "page_markers_verified": 7,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 7,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1154,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        12
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-041",
+      "archive_locator": "private/extracted/ads-library/AD-041.md",
+      "topic": "propensity matching",
+      "pages_in_inventory": 9,
+      "page_markers_verified": 9,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 9,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1340,
+          "mode": "native_page_prefix"
+        },
+        {
+          "page": 4,
+          "character_start": 0,
+          "character_end_exclusive": 1575,
+          "page_text_characters": 1575,
+          "mode": "full_native_page"
+        }
+      ],
+      "handbook_sections": [
+        8
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-042",
+      "archive_locator": "private/extracted/ads-library/AD-042.md",
+      "topic": "causal analysis workflow",
+      "pages_in_inventory": 6,
+      "page_markers_verified": 6,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 6,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1238,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        8,
+        12
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-043",
+      "archive_locator": "private/extracted/ads-library/AD-043.md",
+      "topic": "model and engineering evaluation",
+      "pages_in_inventory": 18,
+      "page_markers_verified": 18,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 18,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 950,
+          "page_text_characters": 1476,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        16,
+        21
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "AD-044",
+      "archive_locator": "private/extracted/ads-library/AD-044.md",
+      "topic": "confounding and stratification",
+      "pages_in_inventory": 6,
+      "page_markers_verified": 6,
+      "historical_review": {
+        "date": "2026-10-17",
+        "status": "reported_all_extracted_native_pages_read",
+        "pages": 6,
+        "evidence": "three prior private review records; not a claim of full visual verification"
+      },
+      "current_reread": [
+        {
+          "page": 2,
+          "character_start": 0,
+          "character_end_exclusive": 550,
+          "page_text_characters": 1847,
+          "mode": "native_page_prefix"
+        }
+      ],
+      "handbook_sections": [
+        3,
+        8
+      ],
+      "publication": "original synthesis only; private text excluded",
+      "visual_verification_this_round": false
+    }
+  ],
+  "office_html_records": [
+    {
+      "id": "OFF-01",
+      "archive_locator": "ads_office/OFF-01.txt",
+      "locator_type": "sanitized_logical_key; private mapping retained outside public metadata",
+      "topic": "mechanism and contracts",
+      "converted_text_characters": 13398,
+      "historical_review": "text reviewed except OFF-04 has no article body",
+      "current_reread": [
+        {
+          "character_start": 0,
+          "character_end_exclusive": 2200,
+          "mode": "converted_text_prefix"
+        }
+      ],
+      "handbook_sections": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "substantive_content": true,
+      "duplicate_body_of": null,
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "OFF-02",
+      "archive_locator": "ads_office/OFF-02.txt",
+      "locator_type": "sanitized_logical_key; private mapping retained outside public metadata",
+      "topic": "bid feedback and delay",
+      "converted_text_characters": 9378,
+      "historical_review": "text reviewed except OFF-04 has no article body",
+      "current_reread": [
+        {
+          "character_start": 0,
+          "character_end_exclusive": 1600,
+          "mode": "converted_text_prefix"
+        }
+      ],
+      "handbook_sections": [
+        13,
+        15
+      ],
+      "substantive_content": true,
+      "duplicate_body_of": null,
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "OFF-03",
+      "archive_locator": "ads_office/OFF-03.txt",
+      "locator_type": "sanitized_logical_key; private mapping retained outside public metadata",
+      "topic": "advertising vocabulary",
+      "converted_text_characters": 5474,
+      "historical_review": "text reviewed except OFF-04 has no article body",
+      "current_reread": [
+        {
+          "character_start": 0,
+          "character_end_exclusive": 1700,
+          "mode": "converted_text_prefix"
+        }
+      ],
+      "handbook_sections": [
+        1,
+        13,
+        14
+      ],
+      "substantive_content": true,
+      "duplicate_body_of": null,
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "OFF-04",
+      "archive_locator": "ads_office/OFF-04.txt",
+      "locator_type": "sanitized_logical_key; private mapping retained outside public metadata",
+      "topic": "hyperlink placeholder",
+      "converted_text_characters": 117,
+      "historical_review": "text reviewed except OFF-04 has no article body",
+      "current_reread": [
+        {
+          "character_start": 0,
+          "character_end_exclusive": 117,
+          "mode": "converted_text_prefix"
+        }
+      ],
+      "handbook_sections": [],
+      "substantive_content": false,
+      "duplicate_body_of": null,
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "WEB-01",
+      "archive_locator": "ads_office/WEB-01.txt",
+      "locator_type": "sanitized_logical_key; private mapping retained outside public metadata",
+      "topic": "causal foundations",
+      "converted_text_characters": 11920,
+      "historical_review": "text reviewed except OFF-04 has no article body",
+      "current_reread": [
+        {
+          "character_start": 0,
+          "character_end_exclusive": 700,
+          "mode": "converted_text_prefix"
+        },
+        {
+          "character_start": 1220,
+          "character_end_exclusive": 3220,
+          "mode": "converted_body_or_diagram_label_excerpt"
+        }
+      ],
+      "handbook_sections": [
+        3,
+        8
+      ],
+      "substantive_content": true,
+      "duplicate_body_of": null,
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "WEB-02",
+      "archive_locator": "ads_office/WEB-02.txt",
+      "locator_type": "sanitized_logical_key; private mapping retained outside public metadata",
+      "topic": "mislabeled duplicate of causal foundations",
+      "converted_text_characters": 9859,
+      "historical_review": "text reviewed except OFF-04 has no article body",
+      "current_reread": [
+        {
+          "character_start": 0,
+          "character_end_exclusive": 700,
+          "mode": "converted_text_prefix"
+        },
+        {
+          "character_start": 1220,
+          "character_end_exclusive": 3220,
+          "mode": "converted_body_or_diagram_label_excerpt"
+        }
+      ],
+      "handbook_sections": [
+        3
+      ],
+      "substantive_content": true,
+      "duplicate_body_of": "WEB-01",
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "WEB-03",
+      "archive_locator": "ads_office/WEB-03.txt",
+      "locator_type": "sanitized_logical_key; private mapping retained outside public metadata",
+      "topic": "historical causal benchmark",
+      "converted_text_characters": 7666,
+      "historical_review": "text reviewed except OFF-04 has no article body",
+      "current_reread": [
+        {
+          "character_start": 0,
+          "character_end_exclusive": 1100,
+          "mode": "converted_text_prefix"
+        },
+        {
+          "character_start": 1400,
+          "character_end_exclusive": 3400,
+          "mode": "converted_body_or_diagram_label_excerpt"
+        }
+      ],
+      "handbook_sections": [
+        12
+      ],
+      "substantive_content": true,
+      "duplicate_body_of": null,
+      "visual_verification_this_round": false
+    },
+    {
+      "id": "WEB-04",
+      "archive_locator": "ads_office/WEB-04.txt",
+      "locator_type": "sanitized_logical_key; private mapping retained outside public metadata",
+      "topic": "workflow diagram labels",
+      "converted_text_characters": 4005,
+      "historical_review": "text reviewed except OFF-04 has no article body",
+      "current_reread": [
+        {
+          "character_start": 0,
+          "character_end_exclusive": 900,
+          "mode": "converted_text_prefix"
+        },
+        {
+          "character_start": 900,
+          "character_end_exclusive": 2900,
+          "mode": "converted_body_or_diagram_label_excerpt"
+        }
+      ],
+      "handbook_sections": [
+        13,
+        21
+      ],
+      "substantive_content": true,
+      "duplicate_body_of": null,
+      "visual_verification_this_round": false
+    }
+  ],
+  "excluded_or_outside_this_assignment": {
+    "unrelated_book_project_files": 216,
+    "web_dependency_files": 222,
+    "root_navigation_images": 10,
+    "other_source_families": "AMS screenshots, ecommerce, SEO, interview PDFs and basic notes covered by separate project audits; no new reread claim here"
+  },
+  "known_issues": [
+    {
+      "id": "ADV-ISSUE-001",
+      "source_id": "WEB-02",
+      "issue": "Title suggests PSM but body duplicates WEB-01; this round opening 2000 body characters confirmed identical, prior review reports full body hash equality. Not a separate PSM body.",
+      "resolution": "PSM coverage based on AD-041 and independent public methods."
+    },
+    {
+      "id": "ADV-ISSUE-002",
+      "source_id": "OFF-04",
+      "issue": "117-character hyperlink placeholder; article body not available and external target not visited.",
+      "resolution": "Excluded from substantive Office count."
+    },
+    {
+      "id": "ADV-ISSUE-003",
+      "source_id": "WEB-04",
+      "issue": "Text extraction contains duplicated diagram labels; connection topology not visually reconstructed.",
+      "resolution": "No proprietary architecture is reproduced."
+    },
+    {
+      "id": "ADV-ISSUE-004",
+      "source_id": "AD-family",
+      "issue": "Cropped lines, missing formula symbols, images and tables not fully verified. Navigation entries are not evidence that linked articles were read.",
+      "resolution": "Use independently explained generic methods; no reconstruction of missing source formulas."
+    }
+  ],
+  "public_reference_checks": [
+    {
+      "id": "causal-assumptions",
+      "url": "https://content.sph.harvard.edu/wwwhsph/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf",
+      "checked_date": "2026-10-19",
+      "extent": "author textbook; search extract checked"
+    },
+    {
+      "id": "cuped",
+      "url": "https://ai.stanford.edu/~ronnyk/2013-02CUPEDImprovingSensitivityOfControlledExperiments.pdf",
+      "checked_date": "2026-10-19",
+      "extent": "original paper; search extract checked"
+    },
+    {
+      "id": "did",
+      "url": "https://arxiv.org/abs/1803.09015",
+      "checked_date": "2026-10-19",
+      "extent": "original paper abstract opened"
+    },
+    {
+      "id": "switchback",
+      "url": "https://arxiv.org/abs/2009.00148",
+      "checked_date": "2026-10-19",
+      "extent": "original paper abstract search extract checked"
+    },
+    {
+      "id": "meta-learners",
+      "url": "https://arxiv.org/abs/1706.03461",
+      "checked_date": "2026-10-19",
+      "extent": "original paper abstract search extract checked"
+    },
+    {
+      "id": "bart",
+      "url": "https://arxiv.org/abs/0806.3286",
+      "checked_date": "2026-10-19",
+      "extent": "original paper metadata search checked"
+    },
+    {
+      "id": "acic",
+      "url": "https://arxiv.org/abs/1707.02641",
+      "checked_date": "2026-10-19",
+      "extent": "original paper abstract search extract checked"
+    },
+    {
+      "id": "gsp",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/aer.97.1.242",
+      "checked_date": "2026-10-19",
+      "extent": "publisher abstract search extract checked; alternate NBER retrieval failed and is not cited"
+    },
+    {
+      "id": "rag",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "checked_date": "2026-10-19",
+      "extent": "original paper abstract opened"
+    },
+    {
+      "id": "mysql-explain",
+      "url": "https://dev.mysql.com/doc/refman/8.0/en/explain-output.html",
+      "checked_date": "2026-10-19",
+      "extent": "official documentation search extract checked"
+    },
+    {
+      "id": "mysql-analyze",
+      "url": "https://dev.mysql.com/doc/refman/8.0/en/explain.html",
+      "checked_date": "2026-10-19",
+      "extent": "official documentation search extract checked"
+    },
+    {
+      "id": "agent-evals",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "checked_date": "2026-10-19",
+      "extent": "official engineering article opened"
+    }
+  ],
+  "limits": [
+    "No imported source code executed.",
+    "No intranet links visited or private documents uploaded.",
+    "No claim that all references were read in full or every source fact was verified.",
+    "No platform current-country rules inferred from historical or private materials.",
+    "No source author identities, company performance figures, proprietary thresholds, internal URLs or source filenames included in public metadata.",
+    "Inventory counts are file and page counts, not counts of unique concepts or permission to republish.",
+    "Public references support general methods; examples and teaching structure are original simulations.",
+    "Advanced handbook is reading material; it does not change the 11-chapter game or implement advanced branches."
+  ]
+}

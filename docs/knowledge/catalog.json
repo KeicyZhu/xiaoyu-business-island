@@ -1,0 +1,240 @@
+{
+  "version": "0.3.0",
+  "updated_at": "2026-10-19",
+  "target_audience": "零经验接触商业化与出海业务的学习者",
+  "artifact_audit": {
+    "original_inventory_items": 27,
+    "imported_items": 550,
+    "total_items": 577,
+    "import_unique_hashes": 445,
+    "all_unique_hashes": 471,
+    "missing": 0,
+    "modified": 0,
+    "note": "文件级条目包括重复、缓存和非教材，不是独立文章数量"
+  },
+  "source_families": [
+    {
+      "id": "SEO",
+      "name": "SEO、国际化与整合营销",
+      "artifacts": 24,
+      "content_notes": "15 Markdown、8仅表头CSV、1 JSON；合订与分章重复不计新教材"
+    },
+    {
+      "id": "INTERVIEW",
+      "name": "广告运营面试参考",
+      "artifacts": 2,
+      "unique_documents": 1,
+      "pages": 223,
+      "content_notes": "两份PDF字节一致，已有OCR"
+    },
+    {
+      "id": "BASIC",
+      "name": "基础商业化笔记",
+      "artifacts": 1,
+      "lines": 1460,
+      "missing_attachments": 10
+    },
+    {
+      "id": "AMS",
+      "name": "广告系统入门截图",
+      "artifacts": 45,
+      "content_notes": "OCR阅读，截图存在重叠与裁切"
+    },
+    {
+      "id": "ADS",
+      "name": "广告、因果与AI工程资料包",
+      "artifacts": 500,
+      "primary_items": 62,
+      "pdfs": 44,
+      "pdf_pages": 514,
+      "office_items": 4,
+      "office_with_body": 3,
+      "html_items": 4,
+      "navigation_images": 10,
+      "web_dependencies_excluded": 222,
+      "unrelated_project_items_excluded": 216
+    },
+    {
+      "id": "ECOM",
+      "name": "电商主题资料",
+      "artifacts": 5,
+      "pdfs": 5,
+      "pdf_pages": 43
+    }
+  ],
+  "handbooks": [
+    {
+      "file": "business-handbook.md",
+      "title": "商业主线手册",
+      "sections": [
+        {
+          "number": 1,
+          "title": "商业目标：先说清楚谁获得什么价值"
+        },
+        {
+          "number": 2,
+          "title": "市场选择与 GTM：从可服务的小范围开始"
+        },
+        {
+          "number": 3,
+          "title": "本地化：把承诺落实到完整交易链路"
+        },
+        {
+          "number": 4,
+          "title": "搜索需求与 SEO：让合适问题找到合适页面"
+        },
+        {
+          "number": 5,
+          "title": "技术与多语言 SEO：把诊断写成可验收工单"
+        },
+        {
+          "number": 6,
+          "title": "渠道与创意：让每个触点承担明确任务"
+        },
+        {
+          "number": 7,
+          "title": "广告怎么运作：目标、出价、排序与计费分开理解"
+        },
+        {
+          "number": 8,
+          "title": "指标字典与漏斗：先统一单位再计算"
+        },
+        {
+          "number": 9,
+          "title": "归因、数据质量与增量：分账和因果是两种问题"
+        },
+        {
+          "number": 10,
+          "title": "单位经济：从成交额算到可以承担的获客成本"
+        },
+        {
+          "number": 11,
+          "title": "留存、复购与 LTV：先看成熟同期群"
+        },
+        {
+          "number": 12,
+          "title": "现金、库存与履约：有利润也可能无法继续交付"
+        },
+        {
+          "number": 13,
+          "title": "电商平台与治理：供给、交易和体验一起看"
+        },
+        {
+          "number": 14,
+          "title": "综合经营判断：把诊断写成行动与验证"
+        }
+      ]
+    },
+    {
+      "file": "advanced-handbook.md",
+      "title": "进阶方法手册",
+      "sections": [
+        {
+          "number": 1,
+          "title": "三种「归因」回答不同问题"
+        },
+        {
+          "number": 2,
+          "title": "从指标变化到可检验的诊断"
+        },
+        {
+          "number": 3,
+          "title": "把问题写成一个可估计的因果问题"
+        },
+        {
+          "number": 4,
+          "title": "一份合格的 A/B 实验方案"
+        },
+        {
+          "number": 5,
+          "title": "显著性、区间与商业价值"
+        },
+        {
+          "number": 6,
+          "title": "提高实验效率，而不改变问题"
+        },
+        {
+          "number": 7,
+          "title": "实验分流、交错实验与多臂老虎机"
+        },
+        {
+          "number": 8,
+          "title": "观察数据：PSM、IPW 与目标人群"
+        },
+        {
+          "number": 9,
+          "title": "DID、断点、工具变量与合成控制"
+        },
+        {
+          "number": 10,
+          "title": "Uplift：把资源用于可能被改变的人群"
+        },
+        {
+          "number": 11,
+          "title": "干扰与双边市场实验"
+        },
+        {
+          "number": 12,
+          "title": "双重稳健、BART 与敏感性分析"
+        },
+        {
+          "number": 13,
+          "title": "广告系统中的四个不同决定"
+        },
+        {
+          "number": 14,
+          "title": "拍卖、激励与多阶段排序"
+        },
+        {
+          "number": 15,
+          "title": "预算、在途消耗与产品契约"
+        },
+        {
+          "number": 16,
+          "title": "平台多目标与模型工程"
+        },
+        {
+          "number": 17,
+          "title": "RAG：给回答增加可核查证据"
+        },
+        {
+          "number": 18,
+          "title": "Text2SQL：查得出不等于查得对"
+        },
+        {
+          "number": 19,
+          "title": "Agent：把意图变成可验收的操作"
+        },
+        {
+          "number": 20,
+          "title": "AI 评测：任务、结果、过程和裁判"
+        },
+        {
+          "number": 21,
+          "title": "可复现工程与失败恢复"
+        },
+        {
+          "number": 22,
+          "title": "与现有 11 章的关系"
+        },
+        {
+          "number": 23,
+          "title": "综合练习：小店预算会议"
+        },
+        {
+          "number": 24,
+          "title": "来源治理与继续学习"
+        }
+      ]
+    }
+  ],
+  "implemented_game": {
+    "chapters": 11,
+    "concepts": 33,
+    "cases": 11,
+    "own_questions": 44,
+    "normal_first_run_presentations": 54,
+    "map": "../product/game-map.json"
+  },
+  "advanced_game_branches_implemented": false
+}

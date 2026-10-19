@@ -1,0 +1,28 @@
+# Private reference material and credentials
+private/
+*.private.md
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local/generated artifacts
+.DS_Store
+node_modules/
+dist/
+coverage/
+*.log
+
+# User-provided knowledge sources: excluded pending publication review
+/海外SEO与整合营销知识库/
+/字节跳动广告运营面试题/
+
+# Additional user-supplied archives
+/*.zip
+
+/基础知识.md
+
+# Browser QA outputs and generated public build
+output/
+.playwright-cli/

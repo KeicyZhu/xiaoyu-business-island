@@ -1,0 +1,224 @@
+{
+  "version": "0.3.0",
+  "sourceCommit": "1628850aa56941f6c8c27598cdb49e75d67b8927",
+  "exportedAt": "2026-10-19T05:19:47.463Z",
+  "note": "Reviewed public source snapshot. Original private research and local conversation history are not included. Subsequent public releases retain their own Git history.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "2e647d9b97947e32579589fa78d2e417c0622777024228b49e6172f51751456d"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "35ae69a4f72b2183712b09d7c28723dcce415f639a6ef3f0f721fabfbbd539a3"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "1e2d343fc853f774c4d32944eb7164b8ecfd0dfb877f54a46fc48767a8ef8718"
+    },
+    {
+      "path": "README.md",
+      "sha256": "99cc64e267ae56dcc2fea758fde8b98acfecc61dcabb84b278fe36cfe9d1b979"
+    },
+    {
+      "path": "RIGHTS.md",
+      "sha256": "516830a22d2a9017ba14758c9e688219876efa71e340a92cc5d0e230f14035a5"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.txt",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "assets/bow.svg",
+      "sha256": "3c9d466ebbc480c3a28bcc85de6dc178e69b5d9819dfb51403c6537fc26981e8"
+    },
+    {
+      "path": "assets/flower.svg",
+      "sha256": "70fe9bcb8e31c854ff05139e263759a571463d0542182cc15b1a7e33382e4662"
+    },
+    {
+      "path": "assets/island.svg",
+      "sha256": "ea7ef41114e27fbe19f854d816a47e953a3f327f21a0c6afa60cb34ebf625fc6"
+    },
+    {
+      "path": "assets/xiaoyu.svg",
+      "sha256": "9ed2a9f9ff20b4064ec970d78e4926c58e6b2c7b34e08bc82840a1cdf7c13a4c"
+    },
+    {
+      "path": "docs/PLAY_GUIDE.md",
+      "sha256": "c346b388fc9ec2d230d19f568b704bee1627cac8a0e7c111e22cf760be607e68"
+    },
+    {
+      "path": "docs/PRD.md",
+      "sha256": "6ee2f23583ef85e7eb7c202c49fe588a908fe74c021f1f5a3daf5d6ee81ea85e"
+    },
+    {
+      "path": "docs/deployment/README.md",
+      "sha256": "f947de8e120695b8303e30d046d6fef015514f334c322f08b250158cb3218728"
+    },
+    {
+      "path": "docs/deployment/pages-workflow.yml",
+      "sha256": "44e42f49535778fc696ee858618c10beaf1c7219180aecb3e7f12aa447f46364"
+    },
+    {
+      "path": "docs/deployment/verify-workflow.yml",
+      "sha256": "2db973b345694daf84ca3ac76da98003016b9596e7381518e5eb50b42ddc6504"
+    },
+    {
+      "path": "docs/images/desktop.png",
+      "sha256": "c3f21ae2a810136feb1764452c3594649d5d5df6584c893a3bd9ba38e71f0de5"
+    },
+    {
+      "path": "docs/images/mobile.png",
+      "sha256": "8bebb1cc1015fd93d8f61295a167f5c3d091258352c23bf44375adcdce60a50a"
+    },
+    {
+      "path": "docs/knowledge/README.md",
+      "sha256": "8fd33a9d74770d5ef377614de7c4cdaa6367287ca84e7d2000392f425088a621"
+    },
+    {
+      "path": "docs/knowledge/advanced-handbook.md",
+      "sha256": "73675abdeb3e89c916b60fe271ead6a5eb4ef619b8073d65b805da8e570bce18"
+    },
+    {
+      "path": "docs/knowledge/business-handbook.md",
+      "sha256": "629194bc6ea2738e56445d0e60245a9a89c4ebcd13b7bfea49251cfd510327ca"
+    },
+    {
+      "path": "docs/knowledge/catalog.json",
+      "sha256": "b6c7db82938ada5744c952c4b381b81336978a3bff7ff6d1f23353697179d611"
+    },
+    {
+      "path": "docs/knowledge/corrections.md",
+      "sha256": "cc1e7d59723303e9f8f54e109e03cb32cfca0a01dd17eee6d6c569ca432e27e8"
+    },
+    {
+      "path": "docs/knowledge/coverage-report.md",
+      "sha256": "6ee78eb82e8b4ae7a349d4f1f8b924c00de2afbe35fafae4f32ad79a96fae429"
+    },
+    {
+      "path": "docs/knowledge/learning-path.md",
+      "sha256": "339275f5ccc0608ff5065abe3a3d6e2ba7650da0883c22a9291e4c09d0b4947b"
+    },
+    {
+      "path": "docs/knowledge/source-audit-advanced.json",
+      "sha256": "b4cb10f01b00140941790da17c5ff1419cc3bc71539ce2dc97c62f8dd09beb8d"
+    },
+    {
+      "path": "docs/knowledge/source-audit-business.json",
+      "sha256": "a3428542dd84c532591c5ed5bbb4f03830d944f935f512c42bff0794128f8738"
+    },
+    {
+      "path": "docs/product/AGENTS-public.md",
+      "sha256": "aa339af1a28069874479eec20082076eaf726f03710515e76deb1fd7c4b7c533"
+    },
+    {
+      "path": "docs/product/architecture.md",
+      "sha256": "bb2098d532acc04d92bee79eef8a5c5e1fcb73e26b9cec1add8f7cf4288d838e"
+    },
+    {
+      "path": "docs/product/game-map.json",
+      "sha256": "d52b19b13150c58b526a625100aa4f22d54ccc217b3145c4ad1337cf542cb6fe"
+    },
+    {
+      "path": "docs/product/game-map.md",
+      "sha256": "e0709c0dd20c406d92ca4f44b99ae64bb8c6ce4303d7780d5f378e36ac73a7d8"
+    },
+    {
+      "path": "index.html",
+      "sha256": "400f088f75bfcc02fbd3bb11dda2a7be1ba93904020ae1331970af97664cab2c"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "ec2f73eba9aae8d15081f12417ccb6a37dbc1e6b3dbbab706d8c210a6a8caacf"
+    },
+    {
+      "path": "package.json",
+      "sha256": "588473ca2b843fa1ef951e7633bd089c5b0800f4c50b16b794e1cee9f67443c4"
+    },
+    {
+      "path": "src/app.js",
+      "sha256": "ac3c3c8c3a85313f203b60af9edd02b99a8ec0ded55a60344e15a53cdc69e183"
+    },
+    {
+      "path": "src/curriculum.js",
+      "sha256": "8b711db8f2c1ac07ae738dbaed51a2bb7ea54b3934f8945c9685fd269032e77c"
+    },
+    {
+      "path": "src/island-scene.js",
+      "sha256": "6321811ec096eb7bcfc74f745c79815af4dcb5f00a8222cd4cbc438e3369b517"
+    },
+    {
+      "path": "src/runner.js",
+      "sha256": "124aa202936095bdc6b8a86f6a6d2c0ad0aa9e6f3df81ae09771e0cb46f5e69b"
+    },
+    {
+      "path": "src/state.js",
+      "sha256": "f5d53590c39c78b9cddd667a1b83f213be9291b00455ff3f5401328cce11d6f8"
+    },
+    {
+      "path": "src/styles.css",
+      "sha256": "e5afdf28a0ac6d0069570a88f2cf66819c9510bbed0d34daa0563547834ee734"
+    },
+    {
+      "path": "src/vendor/three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "src/vendor/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "path": "src/world.css",
+      "sha256": "463fdc30eb6149c784a55e7dc5a41ab55873a10a8f885df96d87e088b52860ec"
+    },
+    {
+      "path": "tests/app-contract.test.mjs",
+      "sha256": "4e31a87687907bb4467cede6cca94fae076d723206a3c587eded8f8ed491c2fe"
+    },
+    {
+      "path": "tests/build.test.mjs",
+      "sha256": "842112367b7b21243682d5f2620956f99c2d187f7edb2c2c24e49ee066673e1f"
+    },
+    {
+      "path": "tests/curriculum.test.mjs",
+      "sha256": "8c318877465f9569ee7872cdcdfb776281d3f94128e4bddbc95e4f8b1002e103"
+    },
+    {
+      "path": "tests/runner.test.mjs",
+      "sha256": "ea837a65f3d88f0475697fd002485f0891c958101a96479c85aaf5729e4f237d"
+    },
+    {
+      "path": "tests/state.test.mjs",
+      "sha256": "5fb111a366eb58ef4ed2455fbb80b4bb2254089976e56c2cc23e4bed3fb14823"
+    },
+    {
+      "path": "tools/build.mjs",
+      "sha256": "0d40686df68fe0f022a78aee45d50192b7e4ce4f6efbe682fb183763cbc474b6"
+    },
+    {
+      "path": "tools/check-labels.mjs",
+      "sha256": "3963a218192845868022118a292f996dfa711f3065d86f086b59da4b2186d98e"
+    },
+    {
+      "path": "tools/check-save-failure.mjs",
+      "sha256": "2956f42642f665e0d85e2d0600502b5bb1304d0e526f8d50f89e6a8d5f521728"
+    },
+    {
+      "path": "tools/check-visual.mjs",
+      "sha256": "ef2fb676e7d57b29c5b8322fccbc18efbac9161a7442809ef7a50293edce4374"
+    },
+    {
+      "path": "tools/check-web-build.mjs",
+      "sha256": "5ed4fa49619f73000ff93595269328ae41d48daf7cdcd4c0b5c590a62b5e9002"
+    },
+    {
+      "path": "tools/export-public.mjs",
+      "sha256": "9035cad99b6654629e4215c5a014855bd1fc917e33b4144d2db5821619ab3b05"
+    },
+    {
+      "path": "tools/server.mjs",
+      "sha256": "a8af9d15227eb4248360df34c4cf0953da97757ec312252c818a0d3c93d876ab"
+    }
+  ]
+}

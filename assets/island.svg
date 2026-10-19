@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+<title id="title">商业岛探索地图</title><desc id="desc">薄荷色海面围绕奶油色岛屿，散布森林、粉色山丘、灯塔、补给小屋和沙滩。中央保留交互关卡空间。</desc>
+<defs>
+<pattern id="sea" width="130" height="90" patternUnits="userSpaceOnUse"><path d="M18 30Q26 36 34 30M80 70Q90 77 100 70" fill="none" stroke="#FFF9EF" stroke-width="2" opacity=".45"/></pattern>
+<g id="tree" stroke="#55796B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M0 8V33" fill="none"/><path d="M0 -42L-20 -11H-11L-27 10H27L11 -11H20Z" fill="#9BC9AC"/><path d="M0 -15V8M0 0L-8 -7" fill="none" opacity=".6"/></g>
+<g id="palm" stroke="#527769" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M0 37Q8 3 1 -27" fill="none" stroke="#A58466" stroke-width="6"/><path d="M2 -25Q-29 -49 -42 -18Q-18 -28 2 -25Q22 -57 41 -25Q17 -31 2 -25Q-16 -21 -25 1Q-34 -24 2 -25Q33 -23 33 1Q18 -17 2 -25Z" fill="#82BBA0"/></g>
+<g id="bush" fill="#C2D5A3" stroke="#7E9671" stroke-width="2"><path d="M-29 8Q-39 -11 -19 -13Q-15 -37 3 -22Q25 -31 25 -9Q45 -6 30 11Z"/></g>
+<g id="rock" fill="#D2CCC0" stroke="#9E9C91" stroke-width="2"><path d="M-17 8L-13 -8L0 -16L18 -5L23 9Z"/><path d="M0 -16L4 4L18 -5" fill="none"/></g>
+<g id="house" stroke="#716456" stroke-width="2.5" stroke-linejoin="round"><rect x="-27" y="-15" width="54" height="49" rx="3" fill="#FFF9EF"/><path d="M-37 -13L0 -43L38 -13Z" fill="#EAB0BB"/><path d="M-9 34V7H9V34" fill="#A5CDBE"/><rect x="-21" y="-5" width="11" height="12" fill="#F3D999"/><rect x="12" y="-5" width="11" height="12" fill="#F3D999"/></g>
+</defs>
+<rect width="1200" height="750" rx="32" fill="#B8DFD5"/><rect width="1200" height="750" rx="32" fill="url(#sea)"/>
+<path d="M180 249Q112 119 287 109Q358 22 488 100Q650 22 750 98Q897 59 966 186Q1105 191 1090 330Q1159 460 1033 506Q1049 652 882 640Q764 729 645 657Q478 720 397 642Q239 692 214 580Q78 542 115 438Q53 328 180 249Z" fill="none" stroke="#D8EDE2" stroke-width="27" opacity=".8"/>
+<path d="M180 249Q112 119 287 109Q358 22 488 100Q650 22 750 98Q897 59 966 186Q1105 191 1090 330Q1159 460 1033 506Q1049 652 882 640Q764 729 645 657Q478 720 397 642Q239 692 214 580Q78 542 115 438Q53 328 180 249Z" fill="#F5E6BD" stroke="#A9B89A" stroke-width="3"/>
+<path d="M201 259Q146 145 294 137Q370 61 486 128Q647 57 748 126Q885 94 943 210Q1067 211 1059 333Q1117 452 1004 484Q1021 617 877 608Q764 686 647 626Q481 682 407 612Q268 652 245 558Q115 524 147 438Q90 340 201 259Z" fill="#FFF5DC"/>
+<!-- Northern knowledge forest, southern commerce gardens; open center reserved for nodes. -->
+<path d="M231 173Q288 96 378 158Q424 192 367 233Q302 218 243 249Q202 225 231 173Z" fill="#DCE4BE"/>
+<path d="M722 111Q797 83 865 137L921 212Q829 244 766 192Z" fill="#EEC8CA"/>
+<path d="M872 514Q946 479 998 527Q1013 593 927 610L858 582Z" fill="#DDE3BE"/>
+<path d="M277 510Q326 469 378 513Q409 562 365 607L278 585Z" fill="#F0D5CC"/>
+<path d="M440 125Q460 103 477 126L508 162H411Z" fill="#E7D8C1" stroke="#BAAA94" stroke-width="2"/><path d="M450 116L461 134L468 125L477 126" fill="#FFF9EF"/>
+<path d="M786 140L817 101L856 162" fill="#D4B7BF" stroke="#B394A0" stroke-width="2"/><path d="M805 118L815 127L825 112" fill="#FFF9EF"/>
+<g opacity=".95"><use href="#tree" transform="translate(274 177) scale(.9)"/><use href="#tree" transform="translate(315 157) scale(1.1)"/><use href="#tree" transform="translate(347 197) scale(.85)"/><use href="#tree" transform="translate(248 212) scale(.75)"/><use href="#tree" transform="translate(898 558)"/><use href="#tree" transform="translate(944 541) scale(.8)"/></g>
+<use href="#palm" transform="translate(178 409)"/><use href="#palm" transform="translate(219 450) scale(.8)"/><use href="#palm" transform="translate(798 615) scale(.8)"/>
+<use href="#house" transform="translate(328 554)"/><use href="#house" transform="translate(958 283) scale(.85)"/>
+<g transform="translate(637 112)" stroke="#716456" stroke-width="2.5" stroke-linejoin="round"><path d="M-19 37L-12 -38H12L19 37Z" fill="#FFF9EF"/><path d="M-16 5H16L17 19H-17Z" fill="#EAB0BB"/><rect x="-14" y="-53" width="28" height="17" fill="#F1D487"/><path d="M-20 -54L0 -70L20 -54Z" fill="#9CC5B4"/><path d="M-25 38H25"/><path d="M-5 37V23H5V37" fill="#9CC5B4"/></g>
+<use href="#bush" transform="translate(420 581) scale(.7)"/><use href="#bush" transform="translate(1013 379)"/><use href="#bush" transform="translate(744 138) scale(.7)"/><use href="#bush" transform="translate(192 306) scale(.8)"/>
+<use href="#rock" transform="translate(536 615)"/><use href="#rock" transform="translate(568 633) scale(.65)"/><use href="#rock" transform="translate(916 190) scale(.7)"/>
+<g stroke="#CFBA91" stroke-width="2" stroke-linecap="round" fill="none"><path d="M268 600l10 3m9 -8l8 2M964 468l11 2m7 -9l7 1M395 112l9 2M168 341l9 1"/></g>
+<g transform="translate(1058 590) rotate(-12)" stroke="#716456" stroke-width="2.5" stroke-linejoin="round"><path d="M-42 0Q0 53 43 0Z" fill="#C79C7D"/><path d="M0 0V-63L33 -8H0" fill="#FFF9EF"/><path d="M-31 27Q0 36 30 27" fill="none" stroke="#FFF9EF"/></g>
+<g transform="translate(97 126)" fill="none" stroke="#6B9588" stroke-width="2"><circle r="28"/><path d="M0 -39V-31M0 31V39M-39 0H-31M31 0H39"/><path d="M0 -21L8 0L0 20L-8 0Z" fill="#FFF9EF"/><path d="M0 -21L8 0H-8Z" fill="#6B9588"/></g>
+<g stroke="#FFF9EF" stroke-width="3" fill="none" stroke-linecap="round"><path d="M1027 104Q1035 96 1043 104Q1051 96 1059 104M1081 126Q1087 120 1093 126Q1099 120 1105 126M84 587Q91 580 98 587Q105 580 112 587"/></g>
+</svg>

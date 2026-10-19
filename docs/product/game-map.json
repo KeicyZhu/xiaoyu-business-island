@@ -1,0 +1,346 @@
+{
+  "version": "1.0.0",
+  "chapters": [
+    {
+      "number": 1,
+      "id": "beach",
+      "name": "空降海滩",
+      "goal": "先认清指标，再启程",
+      "concepts": [
+        {
+          "id": "ctr",
+          "title": "点击率 CTR"
+        },
+        {
+          "id": "cvr",
+          "title": "转化率 CVR"
+        },
+        {
+          "id": "roas",
+          "title": "广告支出回报 ROAS"
+        }
+      ],
+      "book": "指标口袋书",
+      "reward": {
+        "name": "探险背包",
+        "icon": "🎒",
+        "description": "装入宝典，开始商业岛之旅。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "Google Ads 帮助：点击率定义（延伸阅读）",
+        "url": "https://support.google.com/google-ads/answer/2615875"
+      }
+    },
+    {
+      "number": 2,
+      "id": "gtm",
+      "name": "市场罗盘营",
+      "goal": "找到第一批真正需要你的人",
+      "concepts": [
+        {
+          "id": "segment",
+          "title": "客群细分"
+        },
+        {
+          "id": "value-proposition",
+          "title": "价值主张"
+        },
+        {
+          "id": "market-test",
+          "title": "市场验证"
+        }
+      ],
+      "book": "市场罗盘手册",
+      "reward": {
+        "name": "市场指南针",
+        "icon": "🧭",
+        "description": "让航线对准可验证的需求。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "美国 SBA：商业规划（延伸阅读）",
+        "url": "https://www.sba.gov/counseling/plan-your-business/"
+      }
+    },
+    {
+      "number": 3,
+      "id": "seo",
+      "name": "搜索森林",
+      "goal": "让需要你的人找到答案",
+      "concepts": [
+        {
+          "id": "intent",
+          "title": "搜索意图"
+        },
+        {
+          "id": "indexing",
+          "title": "发现与索引"
+        },
+        {
+          "id": "helpful-content",
+          "title": "有用的页面"
+        }
+      ],
+      "book": "搜索地图册",
+      "reward": {
+        "name": "攀爬绳索",
+        "icon": "🪢",
+        "description": "跨过搜索意图与页面之间的沟壑。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "Google Search Central：SEO 入门指南",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      }
+    },
+    {
+      "number": 4,
+      "id": "localization",
+      "name": "跨境桥",
+      "goal": "翻译之后，还要兑现承诺",
+      "concepts": [
+        {
+          "id": "localization-practice",
+          "title": "本地化"
+        },
+        {
+          "id": "language-market",
+          "title": "语言与市场"
+        },
+        {
+          "id": "promise",
+          "title": "履约承诺"
+        }
+      ],
+      "book": "本地化通行册",
+      "reward": {
+        "name": "跨境桥板",
+        "icon": "🪵",
+        "description": "把语言、交易与履约接在一起。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "Google Search Central：多地区和多语言站点",
+        "url": "https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites"
+      }
+    },
+    {
+      "number": 5,
+      "id": "creative",
+      "name": "创意集市",
+      "goal": "把洞察变成可验证的好故事",
+      "concepts": [
+        {
+          "id": "creative-hypothesis",
+          "title": "创意假设"
+        },
+        {
+          "id": "proof",
+          "title": "卖点证据"
+        },
+        {
+          "id": "creative-test",
+          "title": "创意测试"
+        }
+      ],
+      "book": "创意配方册",
+      "reward": {
+        "name": "创意信号旗",
+        "icon": "🚩",
+        "description": "用清楚的卖点吸引同路人。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "Google Ads：关于广告变体（延伸阅读）",
+        "url": "https://support.google.com/google-ads/answer/7438541"
+      }
+    },
+    {
+      "number": 6,
+      "id": "ads",
+      "name": "广告峡谷",
+      "goal": "花出去的钱，走过了哪段漏斗",
+      "concepts": [
+        {
+          "id": "cost-metrics",
+          "title": "CPC 与 CPM"
+        },
+        {
+          "id": "optimization",
+          "title": "优化目标与计费"
+        },
+        {
+          "id": "funnel",
+          "title": "漏斗诊断"
+        }
+      ],
+      "book": "投放作战册",
+      "reward": {
+        "name": "投放滑索",
+        "icon": "🪝",
+        "description": "沿着明确的目标穿过投放峡谷。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "Google Ads：平均每次点击费用定义",
+        "url": "https://support.google.com/google-ads/answer/14074"
+      }
+    },
+    {
+      "number": 7,
+      "id": "measurement",
+      "name": "数据灯塔",
+      "goal": "看见功劳，也看见反事实",
+      "concepts": [
+        {
+          "id": "attribution",
+          "title": "归因"
+        },
+        {
+          "id": "incrementality",
+          "title": "增量"
+        },
+        {
+          "id": "experiment",
+          "title": "实验设计"
+        }
+      ],
+      "book": "测量校准册",
+      "reward": {
+        "name": "增量望远镜",
+        "icon": "🔭",
+        "description": "看清报表以外的真实变化。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "Google Ads：Conversion Lift（方法延伸阅读）",
+        "url": "https://support.google.com/google-ads/answer/12003020"
+      }
+    },
+    {
+      "number": 8,
+      "id": "operations",
+      "name": "补给港",
+      "goal": "赚到的钱，还要装得上船",
+      "concepts": [
+        {
+          "id": "contribution",
+          "title": "广告后贡献"
+        },
+        {
+          "id": "inventory",
+          "title": "库存覆盖与补货"
+        },
+        {
+          "id": "cash-cycle",
+          "title": "现金周转"
+        }
+      ],
+      "book": "补给账本",
+      "reward": {
+        "name": "补给小船",
+        "icon": "⛵",
+        "description": "用稳健现金流和库存穿过水域。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "美国 SBA：经营管理（延伸阅读）",
+        "url": "https://www.sba.gov/counseling/manage-your-business/"
+      }
+    },
+    {
+      "number": 9,
+      "id": "platform",
+      "name": "商业控制塔",
+      "goal": "在商家、用户与平台之间取舍",
+      "concepts": [
+        {
+          "id": "prediction",
+          "title": "预测与观察"
+        },
+        {
+          "id": "auction",
+          "title": "竞价教学模型"
+        },
+        {
+          "id": "ad-load",
+          "title": "广告负载与生态"
+        }
+      ],
+      "book": "平台决策册",
+      "reward": {
+        "name": "平衡之翼",
+        "icon": "🪽",
+        "description": "带着多方目标跨越最后的缺口。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "Google Ads：广告排名（理解多因素约束的延伸阅读）",
+        "url": "https://support.google.com/google-ads/answer/1722122"
+      }
+    },
+    {
+      "number": 10,
+      "id": "governance",
+      "name": "治理堡垒",
+      "goal": "守住安全，也让误判可以被修正",
+      "concepts": [
+        {
+          "id": "errors",
+          "title": "误杀与漏放"
+        },
+        {
+          "id": "appeal",
+          "title": "复核与申诉"
+        },
+        {
+          "id": "guardrails",
+          "title": "治理护栏"
+        }
+      ],
+      "book": "安全通行册",
+      "reward": {
+        "name": "通行徽章",
+        "icon": "🛡️",
+        "description": "带着证据、申诉和责任继续前行。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "TikTok 透明度中心（治理实践延伸阅读，非实时政策结论）",
+        "url": "https://www.tiktok.com/transparency/en/"
+      }
+    },
+    {
+      "number": 11,
+      "id": "final",
+      "name": "逃生终局",
+      "goal": "带着证据，选择自己的航线",
+      "concepts": [
+        {
+          "id": "joint-decision",
+          "title": "综合决策"
+        },
+        {
+          "id": "marginal",
+          "title": "边际效果"
+        },
+        {
+          "id": "review",
+          "title": "证据化复盘"
+        }
+      ],
+      "book": "自己的复盘手册",
+      "reward": {
+        "name": "自由航线",
+        "icon": "🌈",
+        "description": "完成主线，带着错题与复习计划继续成长。"
+      },
+      "questions": 4,
+      "source": {
+        "label": "美国 SBA：经营管理（综合经营延伸阅读）",
+        "url": "https://www.sba.gov/counseling/manage-your-business/"
+      }
+    }
+  ]
+}

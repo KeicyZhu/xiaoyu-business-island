@@ -1,0 +1,519 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-19",
+  "artifact": "docs/knowledge/business-handbook.md",
+  "purpose": "Original public handbook based on local source rereading and independently checked teaching arithmetic; not republication or certification of source claims.",
+  "source_reference_policy": "sources/... values are sanitized logical relative identifiers, not downloadable files. Private absolute paths, internal document titles, names and infrastructure identifiers are intentionally omitted. Hashes identify the exact local text artifacts.",
+  "game_implementation_verified": {
+    "module": "src/curriculum.js",
+    "chapters": 11,
+    "concept_cards": 33,
+    "multiple_choice_questions": 44,
+    "verification": "Imported project-owned curriculum module and counted arrays; no imported reference-source code executed.",
+    "handbook_sections": 14,
+    "handbook_exercises_are_implemented_questions": false
+  },
+  "context_documents_read": [
+    "AGENTS.md",
+    "docs/knowledge/framework.md",
+    "docs/knowledge/inventory.json",
+    "docs/knowledge/reading-coverage.json",
+    "docs/knowledge/corrections.md",
+    "docs/knowledge/basic-knowledge-diff.md"
+  ],
+  "private_review_documents_read": [
+    "reviews/AMS",
+    "reviews/INTERVIEW",
+    "reviews/ECOM"
+  ],
+  "source_family_count": 5,
+  "source_families": [
+    {
+      "family": "SEO",
+      "historical_inventory": {
+        "files": 24,
+        "markdown": 15,
+        "csv": 8,
+        "json": 1
+      },
+      "this_pass": {
+        "unique_chapters_reread": 4,
+        "inputs": [
+          {
+            "source_ref": "sources/SEO-02",
+            "sha256": "4d9697bd2c9b7bb27461ffde662a3442be75566405a7121c79318376838d4c5a",
+            "reread": "complete_chapter_text",
+            "lines": 275
+          },
+          {
+            "source_ref": "sources/SEO-03",
+            "sha256": "9964e858d6b3062bf5f707d5a257114b8ef4a0eb05d0f8b7d591fd00dde588b9",
+            "reread": "complete_chapter_text",
+            "lines": 247
+          },
+          {
+            "source_ref": "sources/SEO-04",
+            "sha256": "360bb01c51566535769150e50b1f294d184d700d33b9877f4e3fb7b6e1a1f466",
+            "reread": "complete_chapter_text",
+            "lines": 129
+          },
+          {
+            "source_ref": "sources/SEO-06",
+            "sha256": "027f4281377a61d09b40ac478d72b369007a854f0f6bd422eafff024e6204a9e",
+            "reread": "complete_chapter_text",
+            "lines": 339
+          }
+        ]
+      },
+      "duplicates": "The compilation repeats chapters 01–09 and was not reread as additional teaching content.",
+      "limits": "Did not reopen all 77 externally indexed URLs, all 20 repository metadata entries, or all template CSVs in this pass. Source assertions about current platform/search features are not republished as verified current facts."
+    },
+    {
+      "family": "BASIC",
+      "source_ref": "sources/BASIC-01",
+      "sha256": "9a7e542bfc02fb3196abcd1d6551b2a44007c1cc859445d0f802e2b08fdbf844",
+      "historical_lines": 1460,
+      "this_pass": {
+        "reread_verified_line_ranges": [
+          [
+            1,
+            323
+          ],
+          [
+            475,
+            579
+          ],
+          [
+            635,
+            774
+          ],
+          [
+            775,
+            930
+          ],
+          [
+            1146,
+            1460
+          ]
+        ],
+        "verified_lines": 1039,
+        "other_ranges": "Additional portions of lines 324–474, 580–634 and 931–1145 were inspected, but combined tool output was partly truncated, so this pass does not claim complete line-by-line rereading of those portions."
+      },
+      "missing_local_attachments": 10,
+      "limits": "No attached image formulas reviewed; stale market-size, platform-policy, price and company-strategy assertions excluded."
+    },
+    {
+      "family": "AMS",
+      "source_ref": "sources/AMS-ocr",
+      "extraction_sha256": "d26fd17e901c0d823ba50de642b17f9d76376f59d6102bdd8cc6a3f93a1a9217",
+      "historical_scope": {
+        "ocr_image_units": 45,
+        "historical_text_chars_reported": 26668,
+        "review_record": "reviews/AMS"
+      },
+      "this_pass": {
+        "ocr_units_reread": [
+          1,
+          2,
+          3,
+          10,
+          11,
+          15,
+          16,
+          17,
+          30,
+          31,
+          36,
+          37,
+          40,
+          41,
+          42
+        ],
+        "count": 15,
+        "mode": "existing_local_ocr_text",
+        "image_visual_checks": 0
+      },
+      "limits": [
+        "Screenshots overlap; counting images does not count independent chapters.",
+        "A training-stage gap, cut-off formulas and directory-only screenshots are known from the prior review.",
+        "This pass did not reconstruct missing formulas or reproduce internal ranking, billing, names, links, goals or business results."
+      ]
+    },
+    {
+      "family": "INTERVIEW",
+      "source_ref": "sources/INTERVIEW-ocr",
+      "extraction_sha256": "77826209dfbfa12e6b07eca2498f9144f62e2d2ff574a4af52a354bc2b125beb",
+      "historical_scope": {
+        "pdf_files": 2,
+        "unique_pdf_files": 1,
+        "ocr_pages": 223,
+        "prior_visual_pages": [
+          15
+        ],
+        "review_record": "reviews/INTERVIEW"
+      },
+      "this_pass": {
+        "pages_reread": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          63,
+          64,
+          66,
+          68,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85
+        ],
+        "page_count": 24,
+        "mode": "existing_local_ocr_text",
+        "image_visual_checks": 0
+      },
+      "duplicates": "The two 223-page PDFs are byte-identical according to the existing inventory; this pass used only one OCR collection.",
+      "limits": "Reference answers and personal-success narratives are not official platform evidence or author experience. This pass did not reread all 223 pages or repeat the previous page-15 visual check."
+    },
+    {
+      "family": "ECOM",
+      "historical_scope": {
+        "pdf_files": 5,
+        "pages": 43,
+        "review_record": "reviews/ECOM",
+        "native_text_prior_read": true
+      },
+      "this_pass": {
+        "documents_with_direct_text_rereading": 5,
+        "inputs": [
+          {
+            "source_ref": "sources/ECOM-01",
+            "extraction_sha256": "44b501e67e018898c66b27fcb0b2d406b4cd388931453a074dd9ef61eeee3f8d",
+            "reread_line_ranges": [
+              [
+                1,
+                150
+              ]
+            ],
+            "reread_line_count": 150,
+            "native_line_count": 477,
+            "mode": "native_text_only",
+            "visual_review_this_pass": false
+          },
+          {
+            "source_ref": "sources/ECOM-02",
+            "extraction_sha256": "30014fbbd79091b51f99f7af1b5af724aef2a13a338d5495610455aae31efd43",
+            "reread_line_ranges": [
+              [
+                1,
+                150
+              ],
+              [
+                200,
+                290
+              ]
+            ],
+            "reread_line_count": 241,
+            "native_line_count": 380,
+            "mode": "native_text_only",
+            "visual_review_this_pass": false
+          },
+          {
+            "source_ref": "sources/ECOM-03",
+            "extraction_sha256": "9e457dc7e65dcc1b5215af864fb671ca9b2552f59d69a17434073cfa22994202",
+            "reread_line_ranges": [
+              [
+                1,
+                83
+              ]
+            ],
+            "reread_line_count": 83,
+            "native_line_count": 83,
+            "mode": "native_text_only",
+            "visual_review_this_pass": false
+          },
+          {
+            "source_ref": "sources/ECOM-04",
+            "extraction_sha256": "678ab55f60b6b6d4f6a657c128a203c53b8da081331c93b2dd7366729781fda6",
+            "reread_line_ranges": [
+              [
+                1,
+                180
+              ]
+            ],
+            "reread_line_count": 180,
+            "native_line_count": 181,
+            "mode": "native_text_only",
+            "visual_review_this_pass": false
+          },
+          {
+            "source_ref": "sources/ECOM-05",
+            "extraction_sha256": "9cb7ac728a3107c9985dc146087c3a79edff4f0709fdb7378daba6bdcc5a436b",
+            "reread_line_ranges": [
+              [
+                1,
+                231
+              ]
+            ],
+            "reread_line_count": 231,
+            "native_line_count": 231,
+            "mode": "native_text_only",
+            "visual_review_this_pass": false
+          }
+        ],
+        "image_visual_checks": 0
+      },
+      "limits": [
+        "Product-understanding and governance files were reread selectively; their remaining technical sections belong to the advanced track.",
+        "The two-page platform-comparison title does not imply a complete comparative textbook.",
+        "Existing native extraction does not cover all image tables or formulas. Only one supplemental OCR page exists historically; it is not treated as full visual review.",
+        "An attachment mentioned in the content-commerce source was not provided as one of these five PDFs.",
+        "No internal URLs visited, services called, or embedded source code executed. Internal cases, benchmark scores, thresholds and confidential identifiers are excluded from public prose."
+      ]
+    }
+  ],
+  "topic_coverage": [
+    {
+      "sections": [
+        "01"
+      ],
+      "topics": [
+        "business objectives",
+        "user versus buyer",
+        "outcomes, process and guardrails"
+      ],
+      "map": [
+        "beach",
+        "gtm"
+      ],
+      "families": [
+        "SEO",
+        "BASIC"
+      ]
+    },
+    {
+      "sections": [
+        "02",
+        "03"
+      ],
+      "topics": [
+        "market selection",
+        "GTM",
+        "positioning",
+        "localization",
+        "service availability"
+      ],
+      "map": [
+        "gtm",
+        "localization"
+      ],
+      "families": [
+        "SEO",
+        "INTERVIEW",
+        "ECOM"
+      ]
+    },
+    {
+      "sections": [
+        "04",
+        "05"
+      ],
+      "topics": [
+        "search intent",
+        "content-to-page mapping",
+        "technical SEO",
+        "international page relations",
+        "AI visibility measurement boundaries"
+      ],
+      "map": [
+        "seo",
+        "localization"
+      ],
+      "families": [
+        "SEO"
+      ]
+    },
+    {
+      "sections": [
+        "06"
+      ],
+      "topics": [
+        "channel roles",
+        "creative evidence",
+        "creator collaboration",
+        "controlled creative comparison"
+      ],
+      "map": [
+        "creative"
+      ],
+      "families": [
+        "SEO",
+        "ECOM"
+      ]
+    },
+    {
+      "sections": [
+        "07",
+        "08"
+      ],
+      "topics": [
+        "ad ecosystem",
+        "billing versus optimization",
+        "pCTR versus observed CTR",
+        "conditional pCVR",
+        "allocation versus payment",
+        "metric dimensions",
+        "weighted rates"
+      ],
+      "map": [
+        "beach",
+        "ads",
+        "measurement",
+        "platform"
+      ],
+      "families": [
+        "AMS",
+        "BASIC",
+        "INTERVIEW",
+        "SEO"
+      ]
+    },
+    {
+      "sections": [
+        "09"
+      ],
+      "topics": [
+        "attribution",
+        "deduplication",
+        "delayed conversion",
+        "incrementality versus credit"
+      ],
+      "map": [
+        "measurement"
+      ],
+      "families": [
+        "SEO",
+        "INTERVIEW",
+        "AMS"
+      ]
+    },
+    {
+      "sections": [
+        "10",
+        "11",
+        "12"
+      ],
+      "topics": [
+        "GMV versus revenue and profit",
+        "unit contribution",
+        "CAC and contribution LTV",
+        "cohorts and retention",
+        "cash timing",
+        "inventory and replenishment"
+      ],
+      "map": [
+        "operations",
+        "platform"
+      ],
+      "families": [
+        "BASIC",
+        "SEO",
+        "AMS",
+        "ECOM"
+      ],
+      "original_supplement": "Cash schedules and simple replenishment examples are explicit original teaching models, not a claim that the supplied materials contain a full supply-chain course."
+    },
+    {
+      "sections": [
+        "13"
+      ],
+      "topics": [
+        "commerce models",
+        "SKU and product data",
+        "ad load",
+        "governance precision and recall",
+        "human review and appeals",
+        "AI authorization boundaries"
+      ],
+      "map": [
+        "platform",
+        "governance"
+      ],
+      "families": [
+        "BASIC",
+        "AMS",
+        "ECOM"
+      ]
+    },
+    {
+      "sections": [
+        "14"
+      ],
+      "topics": [
+        "diagnosis",
+        "marginal budget",
+        "service redemption",
+        "retail versus marketplace accounting",
+        "SaaS transfer exercise"
+      ],
+      "map": [
+        "final"
+      ],
+      "families": [
+        "SEO",
+        "BASIC"
+      ]
+    }
+  ],
+  "formula_validation": {
+    "method": "Independent arithmetic and unit checks using Python assertions; definitions and assumptions stated adjacent to each example.",
+    "checks": [
+      "GTM expected transaction value = 3080",
+      "creative CTR/CVR pairs = 4%/2% and 2%/6%",
+      "predicted per-thousand click/conversion values = 36 and 48",
+      "metric funnel: CTR 2%, CVR 4%, CPM 16, CPC 0.8, CPA 20, ROAS 5",
+      "GPM 80 and reverse GMV 3200",
+      "weighted CVR = 2.8%",
+      "4% to 5% = 1 percentage point and 25% relative",
+      "incremental point estimate 20 buyers, iCPA 30",
+      "unit contribution 35 then 7; breakeven ROAS 1/0.35",
+      "total-investment example ROI 25%",
+      "cohort observed contribution 5600, per initial customer 56, CAC 50",
+      "cash shortfall 500",
+      "inventory turnover 3, days 10, cover 20, reorder point 132",
+      "ad revenue 300 versus fixed-input counterfactual 450",
+      "governance precision 80/90, recall 80%, overall accuracy 97%",
+      "marginal contribution -100 versus 140"
+    ],
+    "arithmetic_assertions_passed": 36
+  },
+  "publication_review": {
+    "original_examples": true,
+    "paid_original_text_republished": false,
+    "private_identifiers_in_public_prose": false,
+    "internal_business_numbers_reused": false,
+    "local_only_originals": true,
+    "external_current_rule_verification_this_pass": false,
+    "current_rule_claims_excluded": true
+  },
+  "known_gaps": [
+    "Full visual verification of source images, diagrams and OCR formulas.",
+    "Missing BASIC attachments and truncated/missing source regions.",
+    "Current country-specific eligibility, fees, taxation, platform policy and advertising product terms.",
+    "Comprehensive cross-border procurement, customs, returns and logistics workflow.",
+    "Real data validation and experiment calibration.",
+    "Converting the extended handbook into new reviewed concept cards, cases and questions."
+  ],
+  "verification_status": "passed: 36 arithmetic assertions; 14 sections each with prerequisites, misconception and exercise; local links resolve; 11/33/44 curriculum count verified; targeted private-identifier scan clean"
+}

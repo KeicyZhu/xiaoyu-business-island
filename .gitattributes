@@ -1,0 +1,2 @@
+# Preserve the upstream Three.js bytes, including its original indentation.
+src/vendor/*.js linguist-vendored -whitespace
