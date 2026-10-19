@@ -1,5 +1,6 @@
+import { applyRealCases } from "./real-case-lessons.js";
 // 原创教学模拟。公开链接供延伸阅读，不表示已核验各市场最新平台政策。
-export const CURRICULUM_VERSION = "1.0.0";
+export const CURRICULUM_VERSION = "1.1.0";
 const concept = (id, title, definition, example, pitfall) => ({
   id,
   title,
@@ -1151,3 +1152,5 @@ export const lessons = [
     },
   },
 ];
+
+applyRealCases(lessons);

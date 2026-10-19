@@ -31,6 +31,11 @@ const files = [
   "CHANGELOG.md",
   "THIRD_PARTY_NOTICES.txt",
   "docs/PRD.md",
+  "docs/product/twin-campaigns.md",
+  "docs/design/twin-real-case-sources.md",
+  "docs/implementation/gtm-image-provenance.json",
+  "assets/gtm/annual-plan.png",
+  "assets/gtm/message-house.png",
   "docs/PLAY_GUIDE.md",
   "docs/product/game-map.md",
   "docs/product/game-map.json",
@@ -118,7 +123,7 @@ await writeFile(
   path.join(destination, "PUBLIC_MANIFEST.json"),
   JSON.stringify(
     {
-      version: "0.3.0",
+      version: "0.4.0",
       sourceCommit,
       exportedAt: new Date().toISOString(),
       note: "Reviewed public source snapshot. Original private research and local conversation history are not included. Subsequent public releases retain their own Git history.",

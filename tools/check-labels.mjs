@@ -2,6 +2,10 @@
 async function checkLabels(page) {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("http://127.0.0.1:4173/");
+  await page
+    .locator('[data-screen="map"]')
+    .first()
+    .click({ noWaitAfter: true });
   await page.waitForSelector(".scene-ready");
   const results = [];
   for (const width of [1512, 390, 320]) {

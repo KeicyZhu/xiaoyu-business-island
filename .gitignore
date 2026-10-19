@@ -26,3 +26,7 @@ coverage/
 # Browser QA outputs and generated public build
 output/
 .playwright-cli/
+
+# Newly supplied source packages; selected approved illustrations are copied separately.
+/GTM入门指南-W的营销笔记/
+/docs/TikTok国际化商业产品经理岗位面试真题及解析/

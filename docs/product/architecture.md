@@ -66,3 +66,11 @@ QA 使用独立浏览器会话，不能清空使用者的日常浏览器存档�
 新增课程应同时补充概念先修、案例、自查要点、题目解释、奖励、来源与状态回归。新增计费服务或上传学习答案需要重新设计权限和说明，不能以补充文案为由静默开启。
 
 图库继续以原创程序化资产为主；第三方素材使用范围在 RIGHTS.md 中说明，Three.js 许可在 THIRD_PARTY_NOTICES.txt。
+
+## v0.4 双岛模块
+
+campaigns-data.js 聚合两条任务和公开来源；campaigns-state.js 管理独立事件存档、题型判定、顺序与资源累计；campaigns-ui.js / campaigns.css 管理双岛、四步骤工作台、报告与备份。campaign-double11.js 依据最新用户增长JD，不再使用早期纯广告产品主线。
+
+real-case-lessons.js 更新原基础营地的11案例；旧存档键与规则保持。assets/gtm只有两张PNG加入精确白名单，不开放任意图片路径。
+
+check-twin.mjs验证16阶段96题真实UI全流程，check-twin-layout.mjs覆盖手机四步骤与图片白名单。新主线没有跑酷。

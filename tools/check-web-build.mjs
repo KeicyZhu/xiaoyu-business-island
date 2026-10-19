@@ -15,6 +15,10 @@ async function checkWebBuild(page) {
     await scratch.setViewportSize({ width: 1440, height: 1000 });
     await scratch.goto("http://127.0.0.1:4174/xiaoyu/");
     await scratch.bringToFront();
+    await scratch
+      .locator('[data-screen="map"]')
+      .first()
+      .click({ noWaitAfter: true });
     await scratch.waitForSelector(".scene-ready", {
       state: "attached",
       timeout: 60000,

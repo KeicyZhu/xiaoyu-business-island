@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "updated_at": "2026-10-19",
   "target_audience": "零经验接触商业化与出海业务的学习者",
   "artifact_audit": {
@@ -236,5 +236,38 @@
     "normal_first_run_presentations": 54,
     "map": "../product/game-map.json"
   },
-  "advanced_game_branches_implemented": false
+  "advanced_game_branches_implemented": false,
+  "twin_campaigns": {
+    "tracks": 2,
+    "stages": 16,
+    "questions": 96,
+    "concept_cards": 48,
+    "open_deliverables": 16,
+    "roles": [
+      "TikTok Shop用户增长产品经理",
+      "中国蟹黄酱品牌GTM负责人"
+    ],
+    "metric_definition": "DNC/MAC为用户授权的明确训练口径，非TikTok内部字典"
+  },
+  "new_source_families": [
+    {
+      "id": "GTM-NEW",
+      "files": 36,
+      "unique": 18,
+      "sheets": 16,
+      "nonempty_cells": 2627,
+      "slides": 5,
+      "media_unique": 14
+    },
+    {
+      "id": "TT-NEW",
+      "files": 2,
+      "unique": 1,
+      "pages": 282,
+      "extracted_chars": 134079,
+      "body_question_titles": 85,
+      "unique_titles": 80,
+      "limitations": "目录错配、重复及未证实数字均经教学校订"
+    }
+  ]
 }

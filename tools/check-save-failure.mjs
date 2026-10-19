@@ -15,6 +15,10 @@ async function checkSaveFailure(page) {
       };
     });
     await scratch.goto("http://127.0.0.1:4173/");
+    await scratch
+      .locator('[data-screen="map"]')
+      .first()
+      .click({ noWaitAfter: true });
     await scratch.locator('.quest-panel [data-open="0"]').click();
     for (let i = 0; i < 3; i++)
       await scratch.locator('[data-action="concept-next"]').click();

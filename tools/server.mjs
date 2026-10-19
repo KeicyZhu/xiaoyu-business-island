@@ -14,7 +14,7 @@ export async function resolvePublicPath(url, root = PROJECT_ROOT) {
     return null;
   const name = raw === "/" ? "/index.html" : raw;
   if (
-    !/^\/(?:index\.html|THIRD_PARTY_NOTICES\.txt|src\/(?:[\w-]+\/)*[\w.-]+\.(?:js|css)|assets\/(?:[\w-]+\/)*[\w.-]+\.svg)$/.test(
+    !/^\/(?:index\.html|THIRD_PARTY_NOTICES\.txt|assets\/gtm\/(?:annual-plan|message-house)\.png|src\/(?:[\w-]+\/)*[\w.-]+\.(?:js|css)|assets\/(?:[\w-]+\/)*[\w.-]+\.svg)$/.test(
       name,
     )
   )
@@ -36,6 +36,7 @@ const types = {
   ".js": "text/javascript; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".svg": "image/svg+xml",
+  ".png": "image/png",
   ".txt": "text/plain; charset=utf-8",
 };
 export function createHandler(root = PROJECT_ROOT) {

@@ -8,7 +8,7 @@ try {
 }
 test("主线包含十一地区及可追溯版本", () => {
   assert.ok(curriculum, "课程文件尚未实现");
-  assert.equal(curriculum.CURRICULUM_VERSION, "1.0.0");
+  assert.equal(curriculum.CURRICULUM_VERSION, "1.1.0");
   assert.equal(curriculum.lessons.length, 11);
 });
 test("关卡、概念与题目 ID 唯一，题目能回查已教概念", () => {

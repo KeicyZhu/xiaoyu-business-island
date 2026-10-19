@@ -9,12 +9,20 @@ async function checkVisual(page) {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 1512, height: 1180 });
   await page.goto(origin);
+  await page
+    .locator('[data-screen="map"]')
+    .first()
+    .click({ noWaitAfter: true });
   const priorSave = await page.evaluate(() =>
     localStorage.getItem("xiaoyu-island-save-v1"),
   );
   try {
     await page.evaluate(() => localStorage.removeItem("xiaoyu-island-save-v1"));
     await page.goto(origin);
+    await page
+      .locator('[data-screen="map"]')
+      .first()
+      .click({ noWaitAfter: true });
     await ready();
     assert(
       (await page.title()).startsWith("空降之商业女王小玉"),
@@ -100,6 +108,10 @@ async function checkVisual(page) {
       };
     });
     await fallback.goto(origin);
+    await fallback
+      .locator('[data-screen="map"]')
+      .first()
+      .click({ noWaitAfter: true });
     await fallback.waitForFunction(() =>
       document
         .querySelector(".map-render-status")

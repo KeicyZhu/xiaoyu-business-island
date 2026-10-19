@@ -53,9 +53,12 @@ export function mountIsland(
     reducedMotion = false,
     onSelect,
     onStatus,
+    variant,
   } = {},
 ) {
   if (!container) return null;
+  const campaignVariant = variant === "double11" || variant === "brand";
+  const isAdIsland = variant === "double11";
   const canvas = document.createElement("canvas");
   canvas.className = "island-canvas";
   canvas.setAttribute("aria-hidden", "true");
@@ -204,7 +207,7 @@ export function mountIsland(
   const sunlight = new THREE.DirectionalLight(0xfff5e8, 2.05);
   sunlight.position.set(-9, 17, 10);
   sunlight.castShadow = true;
-  sunlight.shadow.mapSize.set(1536, 1536);
+  sunlight.shadow.mapSize.set(campaignVariant ? 768 : 1536, campaignVariant ? 768 : 1536);
   Object.assign(sunlight.shadow.camera, {
     left: -12,
     right: 12,
@@ -217,7 +220,7 @@ export function mountIsland(
   sunlight.shadow.normalBias = 0.035;
   sunlight.shadow.radius = 3;
   scene.add(sunlight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, campaignVariant ? 1 : 1.5));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 0.95;
@@ -437,6 +440,7 @@ export function mountIsland(
   );
   const markerTargets = [];
   markerPoints.forEach((p, i) => {
+    if (campaignVariant && nodes.length === 0) return;
     const platform = cyl(
       i === currentIndex ? PALETTE.pink : PALETTE.cream,
       [p.x, p.y - 0.12, p.z],
@@ -673,7 +677,7 @@ export function mountIsland(
     ),
   );
   riceGeo.computeVertexNormals();
-  const rice = instanced(riceGeo, 0x527d35, riceTufts, false);
+  const rice = instanced(riceGeo, 0x527d35, campaignVariant ? riceTufts.filter((_,i)=>i%2===0) : riceTufts, false);
   rice.material = mat(0x527d35, { side: THREE.DoubleSide });
 
   // Detached Tanah Lot-inspired rock temple, joined only by a small ribbon of cloud.
@@ -982,6 +986,7 @@ export function mountIsland(
     palmLeaves = [[], []],
     coconuts = [];
   palms.forEach(([u, v, sz], i) => {
+    if (campaignVariant && [1, 2, 3].includes(i)) return;
     const p = groundPoint(u, v, 0.74),
       lean = (i % 2 ? 1 : -1) * 0.18;
     for (let j = 0; j < 5; j++) {
@@ -1109,6 +1114,90 @@ export function mountIsland(
     clouds.push(cloud);
   }
 
+  // Campaign props are original miniature models, with no real-company logos.
+  // The foundation map above is unchanged when no variant is supplied.
+  if (campaignVariant) {
+    const accent=isAdIsland?0xe878ad:0xd79443;
+    const pale=isAdIsland?0xf6d3e2:0xf1daa1;
+    const dark=isAdIsland?0x324f70:0x6f6842;
+    const props=orientedGroup(0,0,.76);
+    const rows=[],details=[];
+    const instanceLocal=(list,parent,position,scale,rotation=0)=>{
+      parent.updateMatrixWorld(true);
+      const local=new THREE.Matrix4().compose(new THREE.Vector3(...position),new THREE.Quaternion().setFromEuler(new THREE.Euler(0,rotation,0)),new THREE.Vector3(...scale));
+      local.premultiply(parent.matrixWorld);
+      const p=new THREE.Vector3(),q=new THREE.Quaternion(),size=new THREE.Vector3();local.decompose(p,q,size);
+      list.push({p:p.toArray(),s:size.toArray(),q});
+    };
+    if(isAdIsland){
+      // An ad operations tower and screen beside the gateway.
+      const hub=orientedGroup(2.6,.1,.76);
+      box(dark,[0,.73,0],[1.05,1.46,.95],hub);
+      box(pale,[0,1.52,0],[1.18,.12,1.06],hub);
+      for(let row=0;row<4;row++)for(let col=0;col<3;col++)instanceLocal(details,hub,[-.33+col*.33,.27+row*.28,.49],[.16,.13,.025]);
+      const screen=orientedGroup(2.15,1.75,.76);
+      for(const x of [-.73,.73])box(dark,[x,.65,0],[.075,1.3,.075],screen);
+      box(dark,[0,1.58,0],[2.1,1.13,.18],screen);
+      box(0xeee4ef,[0,1.58,.105],[1.94,.95,.035],screen);
+      // Bar chart and creative thumbnail make this an ad screen, not an invented logo.
+      for(let i=0;i<4;i++)box(i===3?accent:0x6599b6,[-.65+i*.28,1.29+i*.075,.14],[.17,.22+i*.15,.045],screen,false);
+      box(accent,[.64,1.79,.14],[.36,.29,.045],screen,false);
+      box(dark,[.64,1.5,.14],[.36,.04,.045],screen,false);
+      // Low logistics hall, loading bays and shipping parcels.
+      const warehouse=orientedGroup(-3.25,2.6,.76);
+      box(pale,[0,.46,0],[2.1,.92,1.3],warehouse);
+      box(dark,[0,.98,0],[2.24,.12,1.44],warehouse);
+      for(const x of [-.6,.6])box(dark,[x,.35,.66],[.61,.62,.035],warehouse);
+      for(let i=0;i<6;i++){
+        const x=-.7+(i%3)*.43,y=.17+Math.floor(i/3)*.32;
+        instanceLocal(rows,warehouse,[x,y,1.07],[.34,.3,.31]);
+        instanceLocal(details,warehouse,[x,y+.156,1.07],[.075,.012,.315]);
+      }
+      // Campaign pennants on the main processional plaza.
+      for(const x of [-1.85,1.85]){
+        cyl(dark,[x,1.2,1.55],[.025,2.4,.025],props,false);
+        box(accent,[x+.22,2.12,1.55],[.45,.62,.035],props,false);
+        box(pale,[x+.22,2.15,1.575],[.26,.045,.012],props,false);
+      }
+    }else{
+      // Amber food jars are deliberately unbranded: the player will choose a brand.
+      const market=orientedGroup(2.55,1.45,.76);
+      box(PALETTE.stone,[0,.12,0],[2.15,.24,1.3],market);
+      for(const x of [-.92,.92])for(const z of [-.45,.45])box(PALETTE.coral,[x,.92,z],[.08,1.65,.08],market);
+      box(accent,[0,1.78,0],[2.2,.14,1.48],market);
+      for(let i=0;i<7;i++)box(i%2?pale:accent,[-.94+i*.31,1.64,.77],[.31,.22,.07],market,false);
+      box(PALETTE.earth,[0,.67,.1],[1.88,.12,.87],market);
+      for(let i=0;i<5;i++){
+        const x=-.66+i*.33;
+        cyl(accent,[x,.91,.28],[.115,.35,.115],market);
+        cyl(dark,[x,1.1,.28],[.125,.055,.125],market);
+        box(pale,[x,.91,.39],[.16,.13,.015],market,false);
+      }
+      // Larger product prototype gives the food line a clear miniature silhouette.
+      const product=orientedGroup(-2.55,2.9,.76);
+      cyl(0xc9873a,[0,.48,0],[.43,.9,.43],product);
+      cyl(dark,[0,.97,0],[.46,.12,.46],product);
+      box(pale,[0,.48,.43],[.48,.31,.025],product,false);
+      const foodMark=makeGeometry(new THREE.TorusGeometry(.105,.02,5,20));
+      mesh(foodMark,accent,[0,.48,.46],[1,1,1],product,false);
+      // Farm crates and low crop beds connect the product to its supply chain.
+      const farm=orientedGroup(-4.3,.4,.76);
+      for(let i=0;i<3;i++){
+        box(PALETTE.earth,[-.5+i*.55,.1,0],[.47,.2,1.2],farm);
+        for(let j=0;j<4;j++)instanceLocal(rows,farm,[-.5+i*.55,.25,-.43+j*.28],[.2,.15,.2]);
+      }
+      for(let i=0;i<4;i++){
+        instanceLocal(details,props,[2.9+i*.31,.2,3.9],[.25,.35,.3]);
+      }
+      // The existing outrigger becomes a small export vessel carrying sample crates.
+      boat.scale.setScalar(1.18);
+      for(const z of [-.25,.15])box(PALETTE.earth,[.1,.22,z],[.2,.22,.25],boat);
+      sail.material=mat(accent,{side:THREE.DoubleSide});
+    }
+    if(rows.length)instanced(unitBox,isAdIsland?0xba946a:0x75a05b,rows);
+    if(details.length)instanced(unitBox,isAdIsland?0xb9deeb:0xc59152,details,false);
+  }
+
   const projected = new THREE.Vector3();
   const restoreNodes = () =>
     nodes.forEach((node, i) => {
@@ -1116,6 +1205,7 @@ export function mountIsland(
       node.style.top = fallback[i].top;
     });
   const projectNodes = () => {
+    if (nodes.length === 0) return;
     const positions = markerPoints.map((p) => {
       projected.copy(p).project(camera);
       return {

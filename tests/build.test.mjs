@@ -18,6 +18,7 @@ async function fixture(t) {
   t.after(() => rm(root, { recursive: true, force: true }));
   for (const d of ["src", "assets", "private", "docs", "dist"])
     await mkdir(path.join(root, d));
+  await mkdir(path.join(root, "assets/gtm"));
   for (const [name, value] of Object.entries({
     "index.html": "hello",
     "src/main.js": "export {};",
@@ -27,6 +28,9 @@ async function fixture(t) {
     "docs/info.md": "DOCS",
     "src/archive.zip": "ZIP",
     "assets/original.jpg": "IMAGE",
+    "assets/gtm/annual-plan.png": "APPROVED_REFERENCE",
+    "assets/gtm/message-house.png": "APPROVED_REFERENCE",
+    "assets/gtm/unreviewed.png": "PRIVATE_REFERENCE",
     "THIRD_PARTY_NOTICES.txt": "The MIT License — three.js authors",
     "dist/stale.js": "OLD",
   }))
@@ -44,6 +48,8 @@ test("public path whitelist rejects source leakage and traversal", async (t) => 
     "/src/style.css",
     "/assets/island.svg",
     "/THIRD_PARTY_NOTICES.txt",
+    "/assets/gtm/annual-plan.png",
+    "/assets/gtm/message-house.png",
   ])
     assert.ok(await server.resolvePublicPath(url, root), url);
   for (const url of [
@@ -59,6 +65,7 @@ test("public path whitelist rejects source leakage and traversal", async (t) => 
     "/src/",
     "/package.json",
     "/auth.txt",
+    "/assets/gtm/unreviewed.png",
     "/private/THIRD_PARTY_NOTICES.txt",
     "/src/missing.js",
     "/%",
@@ -79,7 +86,7 @@ test("build only copies whitelisted public files and removes stale output", asyn
     path.join(root, "src/leak.js"),
   );
   const result = await builder.build(root);
-  assert.equal(result.count, 5);
+  assert.equal(result.count, 7);
   assert.deepEqual((await readdir(path.join(root, "dist"))).sort(), [
     "THIRD_PARTY_NOTICES.txt",
     "assets",
