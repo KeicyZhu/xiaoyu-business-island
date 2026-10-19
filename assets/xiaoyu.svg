@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="380" viewBox="0 0 300 380" role="img" aria-labelledby="title desc">
+<title id="title">小玉探索装 · 非官方开发原型</title><desc id="desc">黑色卷发、大眼睛和雀斑的女孩穿奶白裙，提粉色小包，戴波点蝴蝶结。基于用户参考的代码绘图，非官方授权素材。</desc>
+<g stroke="#302A32" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="150" cy="362" rx="69" ry="10" fill="#302A32" opacity=".1" stroke="none"/>
+<path d="M72 122C26 106 30 184 37 231S12 295 20 267" fill="none" stroke-width="17"/><path d="M226 126C270 98 267 186 259 237S289 287 280 259" fill="none" stroke-width="17"/>
+<path d="M123 303L122 347Q116 360 133 359L144 347L147 306M153 306L156 347Q167 362 179 355L176 305" fill="#F7CEB8"/>
+<path d="M120 340L118 352Q117 365 138 359L146 348M157 348L166 361Q185 367 181 350L177 340" fill="#FFF9EF"/>
+<path d="M130 218Q125 249 110 285L97 304Q150 331 205 305L189 284Q177 249 171 218" fill="#FFF9EF"/>
+<path d="M131 226Q111 226 115 259L136 280M170 226Q191 228 186 260L166 280" fill="#F7CEB8"/>
+<path d="M139 282Q135 267 151 267Q166 267 166 282" fill="none" stroke="#BB6388"/>
+<rect x="131" y="280" width="43" height="29" rx="9" fill="#E99ABC"/>
+<path d="M60 146Q43 52 116 35Q182 9 229 66Q249 93 236 156L226 201L66 202Z" fill="#29252C"/>
+<path d="M68 121Q73 81 101 72L120 93L132 69L151 89L163 64L183 85L196 72Q224 92 232 126L231 173Q224 223 151 228Q74 226 65 176Z" fill="#F7CEB8"/>
+<ellipse cx="99" cy="148" rx="33" ry="40" fill="#FFF9EF" stroke-width="2"/><ellipse cx="199" cy="148" rx="33" ry="40" fill="#FFF9EF" stroke-width="2"/>
+<ellipse cx="105" cy="151" rx="25" ry="34" fill="#29252C" stroke="none"/><ellipse cx="193" cy="151" rx="25" ry="34" fill="#29252C" stroke="none"/>
+<g fill="#FFF9EF" stroke="none"><path d="M103 125L106 132L114 133L108 138L109 146L103 142L97 146L98 138L92 133L100 132Z"/><path d="M189 125L192 132L200 133L194 138L195 146L189 142L183 146L184 138L178 133L186 132Z"/><circle cx="116" cy="156" r="4"/><circle cx="203" cy="156" r="4"/></g>
+<path d="M72 122L65 113M82 113L78 102M94 108L93 98M207 108L211 98M219 114L225 104M229 124L237 116" fill="none" stroke-width="2"/>
+<ellipse cx="90" cy="188" rx="22" ry="11" fill="#ED9CAE" opacity=".65" stroke="none"/><ellipse cx="211" cy="188" rx="22" ry="11" fill="#ED9CAE" opacity=".65" stroke="none"/>
+<g fill="#AC6F66" stroke="none"><circle cx="78" cy="187" r="1.6"/><circle cx="87" cy="194" r="1.6"/><circle cx="99" cy="186" r="1.6"/><circle cx="202" cy="188" r="1.6"/><circle cx="214" cy="195" r="1.6"/><circle cx="223" cy="185" r="1.6"/></g>
+<ellipse cx="150" cy="178" rx="8" ry="7" fill="#E99BAC" stroke="none"/><path d="M146 198Q151 191 155 198Q160 204 153 207" fill="none" stroke="#AC6F66" stroke-width="2"/>
+<path d="M76 50Q46 24 48 61Q48 88 79 68Q108 88 108 60Q107 32 76 50Z" fill="#FFF9EF"/><ellipse cx="78" cy="59" rx="7" ry="11" fill="#9AD8C8"/>
+<g fill="#302A32" stroke="none"><circle cx="57" cy="51" r="2.5"/><circle cx="59" cy="69" r="2.5"/><circle cx="96" cy="50" r="2.5"/><circle cx="96" cy="69" r="2.5"/></g>
+</g></svg>
