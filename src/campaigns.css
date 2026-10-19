@@ -1,0 +1,1023 @@
+/* Twin missions share one sky; detail views become readable working documents. */
+.screen-twin main {
+  max-width: none;
+  padding: 0;
+}
+.screen-twin .inner-topline,
+.screen-twin .page-footer {
+  display: none;
+}
+.twin-home {
+  background: radial-gradient(ellipse at 50% 35%, #d6eff1, #a9dbe9 72%);
+  min-height: calc(100svh - 88px);
+  padding: 30px 5vw 24px;
+  overflow: clip;
+}
+.twin-intro {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.twin-intro > span {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #527b87;
+}
+.twin-intro h1 {
+  font-size: 32px;
+  margin: 12px 0;
+  letter-spacing: -1.5px;
+}
+.twin-intro p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #416a78;
+  margin: 0;
+}
+.campaign-islands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  position: relative;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+.campaign-island {
+  position: relative;
+  min-width: 0;
+  padding-top: 0;
+  text-align: center;
+}
+.campaign-scene {
+  height: 400px;
+  position: relative;
+}
+.campaign-scene.scene-unavailable {
+  background: url("../assets/island.svg") center/contain no-repeat;
+}
+.campaign-scene.scene-unavailable:after {
+  content: "地图预览 · 任务仍可进行";
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+}
+.campaign-identity {
+  position: relative;
+  z-index: 2;
+  margin-top: -17px;
+}
+.campaign-identity > span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #5d607b;
+}
+.campaign-identity h2 {
+  font-size: 27px;
+  margin: 7px 0 9px;
+  letter-spacing: -1px;
+}
+.campaign-identity p {
+  font-size: 11px;
+  max-width: 340px;
+  margin: 0 auto 17px;
+  line-height: 1.8;
+  color: #426b78;
+}
+.campaign-identity .button {
+  padding: 12px 24px;
+  min-width: 175px;
+}
+.campaign-double11 .campaign-identity .primary {
+  background: #f5b2cb;
+  border-color: #d190ac;
+}
+.campaign-brand .campaign-identity .primary {
+  background: #e5efa6;
+  border-color: #bac77e;
+}
+.campaign-identity small {
+  display: block;
+  margin-top: 11px;
+  color: #4c7280;
+  font-size: 9px;
+}
+.twin-note {
+  max-width: 950px;
+  margin: 28px auto 0;
+  border-top: 1px solid #6194a24d;
+  padding: 16px 0;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+.twin-note > span {
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.twin-note p {
+  font-size: 10px;
+  line-height: 1.8;
+  margin: 0;
+  color: #527581;
+}
+.campaign-home-links {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+}
+.campaign-home-links button {
+  font-size: 11px;
+  padding: 5px 0;
+  border-bottom: 1px solid #6c9ca5;
+}
+.mission-workspace {
+  display: grid;
+  grid-template-columns: 238px minmax(0, 1fr);
+  max-width: 1450px;
+  margin: auto;
+  min-height: calc(100vh - 88px);
+  background: #deedf1;
+}
+.mission-navigation {
+  padding: 28px 20px;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  max-height: 100vh;
+  overflow: auto;
+}
+.mission-back {
+  font-size: 11px;
+  color: #446c7b;
+  padding: 0;
+}
+.mission-navigation > p {
+  font-size: 9px;
+  margin: 24px 0 6px;
+  color: #66808b;
+}
+.mission-navigation > h2 {
+  font-size: 23px;
+  margin-bottom: 22px;
+}
+.mission-navigation nav {
+  display: grid;
+  gap: 6px;
+}
+.mission-navigation nav button {
+  display: flex;
+  gap: 12px;
+  text-align: left;
+  padding: 12px 9px;
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+}
+.mission-navigation nav button.active {
+  border-color: #477d81;
+  background: #c5e0e6;
+}
+.mission-navigation nav button > span:first-child {
+  font-size: 12px;
+  font-weight: 600;
+  color: #68888b;
+}
+.mission-navigation nav b {
+  font-size: 12px;
+  display: block;
+  font-weight: 600;
+}
+.mission-navigation nav small {
+  display: block;
+  font-size: 9px;
+  color: #64818c;
+  margin-top: 4px;
+}
+.mission-navigation > .text-button {
+  margin-top: 25px;
+  font-size: 10px;
+}
+.mission-navigation button:disabled {
+  opacity: 0.48;
+}
+.mission-main {
+  min-width: 0;
+  background: #f4f9fb;
+  border-left: 1px solid #a7c7d2;
+  padding: 32px 38px 50px;
+}
+.mission-kicker {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #60828e;
+}
+.mission-main h1 {
+  font-size: 31px;
+  margin: 9px 0 11px;
+}
+.mission-main header > p {
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 800px;
+  color: #446677;
+}
+.campaign-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 25px;
+  font-size: 10px;
+  padding: 15px 0;
+  color: #547282;
+  border-block: 1px solid #c7dce3;
+  margin: 18px 0 7px;
+}
+.campaign-metrics b {
+  font-size: 19px;
+  color: #254e60;
+  font-weight: 600;
+  margin: 0 4px;
+}
+.metric-disclosure {
+  font-size: 9px;
+  color: #6a8390;
+  display: block;
+}
+.mission-tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid #bfd4dc;
+  margin: 26px 0 25px;
+  position: sticky;
+  top: 0;
+  background: #f4f9bf;
+  z-index: 5;
+  padding: 5px 0;
+  background: #f4f9fb;
+}
+.mission-tabs button {
+  padding: 13px 15px;
+  color: #547382;
+  font-size: 11px;
+  border-bottom: 2px solid transparent;
+}
+.mission-tabs button[aria-current] {
+  color: #8e4165;
+  border-color: #bd7291;
+  background: #f2dce77a;
+}
+.mission-tab-content {
+  max-width: 960px;
+}
+.mission-tab-content h3 {
+  font-size: 20px;
+  margin: 18px 0 13px;
+}
+.mission-tab-content > p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.mission-tab-content .button {
+  margin-top: 15px;
+}
+.carry-note {
+  font-size: 12px;
+  background: #e0edf3;
+  border-left: 3px solid #78a7b8;
+  padding: 15px 18px;
+  line-height: 1.85;
+  margin: 0 0 23px;
+}
+.carry-note p {
+  margin: 7px 0;
+}
+.carry-note strong {
+  font-size: 11px;
+  color: #376375;
+}
+.evidence-block {
+  padding: 20px 22px;
+  background: #e7f0e7;
+  border: 1px solid #c4d8c2;
+  border-radius: 10px;
+  margin-bottom: 22px;
+}
+.case-tag {
+  font-size: 9px;
+  letter-spacing: 0.6px;
+  color: #42794d;
+  font-weight: 700;
+}
+.case-tag.simulated {
+  color: #986643;
+}
+.evidence-block h3 {
+  font-size: 18px;
+  margin: 9px 0 11px;
+}
+.evidence-block p {
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+.evidence-block details {
+  margin-top: 15px;
+  font-size: 11px;
+  border-top: 1px dashed #b8cfb6;
+  padding-top: 12px;
+}
+.evidence-block summary {
+  cursor: pointer;
+}
+.evidence-block details p {
+  font-size: 11px;
+  margin: 15px 0;
+}
+.evidence-block details p span {
+  color: #5c765f;
+}
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+.source-links a {
+  font-size: 10px;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 3px;
+}
+.mission-material {
+  margin-bottom: 28px;
+}
+.material-copy {
+  white-space: pre-line;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.material-table {
+  overflow: auto;
+  border: 1px solid #c8dbe3;
+  border-radius: 8px;
+  margin-top: 17px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.75;
+}
+th,
+td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #d2e0e6;
+  vertical-align: top;
+}
+th {
+  background: #dfecf2;
+  font-weight: 600;
+  color: #3a6074;
+}
+td {
+  background: #fff;
+}
+tbody tr:last-child td {
+  border: 0;
+}
+.mission-concepts > details {
+  padding: 13px 0;
+  border-bottom: 1px solid #d4e1e7;
+}
+.mission-concepts summary {
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.mission-concepts p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #53727f;
+  margin: 11px 0 0;
+}
+.gtm-reference {
+  margin: 25px 0;
+  border: 1px solid #c1d5df;
+  padding: 13px;
+  background: #fff;
+}
+.gtm-reference img {
+  max-width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+.gtm-reference figcaption {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #617984;
+  margin-top: 12px;
+}
+.decision-options {
+  display: grid;
+  gap: 14px;
+  margin: 20px 0;
+}
+.decision-option {
+  display: flex;
+  gap: 14px;
+  padding: 21px 23px;
+  border: 1px solid #bfd3dd;
+  background: #fff;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.decision-option:has(input:checked) {
+  background: #e8efd8;
+  border-color: #9baa70;
+}
+.decision-option input {
+  flex: none;
+  margin: 7px 0;
+  accent-color: #617f42;
+}
+.decision-option h4 {
+  font-size: 15px;
+  margin: 0 0 9px;
+}
+.decision-option p {
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0 0 12px;
+}
+.effect-line {
+  font-size: 11px;
+  color: #5d6f3c;
+  margin-bottom: 9px;
+}
+.decision-option small {
+  font-size: 11px;
+  color: #607784;
+  line-height: 1.8;
+}
+.question-intro p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #517080;
+}
+.campaign-question {
+  margin: 26px 0;
+  border: 1px solid #c1d7df;
+  border-radius: 9px;
+  padding: 20px;
+  background: #fff;
+  min-width: 0;
+}
+.campaign-question legend {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.85;
+  padding: 0 8px;
+  max-width: 100%;
+  white-space: pre-line;
+}
+.campaign-question legend > span {
+  display: block;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #758c98;
+  margin-bottom: 7px;
+}
+.question-options {
+  display: grid;
+  gap: 9px;
+  margin: 10px 0;
+}
+.question-options label {
+  display: flex;
+  gap: 11px;
+  padding: 13px 15px;
+  border: 1px solid #d7e3e8;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.8;
+  cursor: pointer;
+}
+.question-options label:has(input:checked) {
+  background: #e8eff9;
+  border-color: #86a6c3;
+}
+.question-options input {
+  align-self: start;
+  margin-top: 5px;
+  accent-color: #527995;
+}
+.question-options button {
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid #d4dfe7;
+  background: #f5f9fb;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.numeric-answer {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+  margin: 15px 0;
+}
+.numeric-answer input {
+  width: 170px;
+  max-width: 100%;
+  border: 1px solid #9fbacb;
+  border-radius: 6px;
+  padding: 10px;
+  color: #21475c;
+  background: #f4f9fc;
+}
+.ordering-selected {
+  font-size: 12px;
+  line-height: 1.8;
+  padding: 13px;
+  background: #edf3e4;
+  margin: 10px 0;
+}
+.ordering-selected span {
+  display: block;
+  margin: 7px 0;
+}
+.question-feedback {
+  padding: 15px 18px;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-size: 12px;
+  line-height: 1.9;
+  background: #f8e6e9;
+  color: #704553;
+}
+.question-feedback.correct {
+  background: #edf3db;
+  color: #425a37;
+}
+.question-feedback p {
+  margin: 6px 0 0;
+}
+.assessment-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.assessment-actions > span {
+  font-size: 12px;
+  color: #637685;
+}
+.report-answer {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 24px 0;
+}
+.report-answer textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #a9c5d2;
+  border-radius: 8px;
+  background: #fff;
+  color: #244b5c;
+  padding: 16px;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.9;
+  min-height: 200px;
+}
+.report-checks {
+  display: grid;
+  gap: 11px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.report-checks label {
+  display: flex;
+  align-items: start;
+  gap: 9px;
+}
+.report-checks input {
+  accent-color: #5c824a;
+  margin-top: 5px;
+}
+.self-review-note {
+  font-size: 10px !important;
+  color: #687f8b;
+  margin-top: 20px;
+}
+.mission-completion {
+  margin-top: 22px;
+  padding: 18px;
+  background: #e7eef2;
+  border-radius: 7px;
+}
+.mission-completion p {
+  font-size: 11px;
+}
+.mission-completion b {
+  font-size: 13px;
+  display: block;
+}
+.mission-completion > .button {
+  display: block;
+}
+.campaign-report,
+.campaign-sources {
+  max-width: 1150px;
+  margin: auto;
+  padding: 35px 35px 65px;
+}
+.campaign-report h1,
+.campaign-sources h1 {
+  font-size: 31px;
+  margin-top: 25px;
+}
+.campaign-report > p,
+.campaign-sources > p {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.campaign-report > section {
+  margin-top: 35px;
+}
+.campaign-report h2 {
+  font-size: 23px;
+}
+.report-mission {
+  border-bottom: 1px solid #9bbfc9;
+  padding: 14px 0;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.report-mission summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.report-mission summary > span {
+  float: right;
+  font-size: 10px;
+  color: #517d86;
+}
+.report-mission p {
+  margin: 14px 0;
+}
+.saved-report {
+  white-space: pre-wrap;
+  background: #e4f0f2;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+.campaign-save-tools {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+.campaign-save-tools label {
+  position: relative;
+  overflow: hidden;
+}
+.campaign-save-tools input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+}
+.campaign-sources article {
+  border-bottom: 1px solid #9ebfcb;
+  padding: 24px 0;
+}
+.campaign-sources h2 {
+  font-size: 21px;
+}
+.campaign-sources article p {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.campaign-sources article small,
+.campaign-sources article a {
+  font-size: 10px;
+}
+.source-boundary {
+  color: #507180;
+}
+.campaign-save-warning:not([hidden]) {
+  background: #f8dbe6;
+  padding: 12px 22px;
+  color: #833f59;
+  font-size: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.campaign-save-warning button {
+  text-decoration: underline;
+}
+@media (max-width: 1100px) {
+  .world-header nav {
+    gap: 14px;
+  }
+  .nav-item {
+    font-size: 10px;
+  }
+  .campaign-scene {
+    height: 340px;
+  }
+  .twin-intro h1 {
+    font-size: 27px;
+  }
+  .mission-workspace {
+    grid-template-columns: 205px minmax(0, 1fr);
+  }
+  .mission-main {
+    padding: 27px 25px;
+  }
+  .mission-navigation {
+    padding: 25px 15px;
+  }
+  .mission-tabs button {
+    padding: 11px 9px;
+    font-size: 10px;
+  }
+  .mission-main h1 {
+    font-size: 27px;
+  }
+}
+@media (max-width: 700px) {
+  .screen-twin main {
+    padding: 0 0 66px;
+  }
+  .twin-home {
+    padding: 25px 16px;
+  }
+  .twin-intro > span {
+    font-size: 6px;
+    letter-spacing: 2px;
+  }
+  .twin-intro h1 {
+    font-size: 25px;
+    line-height: 1.4;
+    max-width: 320px;
+    margin: 13px auto;
+  }
+  .twin-intro p {
+    font-size: 10px;
+    line-height: 1.9;
+  }
+  .campaign-islands {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .campaign-scene {
+    height: 300px;
+    max-width: 420px;
+    margin: auto;
+  }
+  .campaign-identity {
+    margin-top: -22px;
+  }
+  .campaign-identity h2 {
+    font-size: 25px;
+  }
+  .campaign-identity p {
+    font-size: 11px;
+    max-width: 300px;
+  }
+  .campaign-identity .button {
+    padding: 11px 24px;
+  }
+  .twin-note {
+    margin-top: 30px;
+    display: block;
+  }
+  .twin-note > span {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 12px;
+  }
+  .twin-note p {
+    font-size: 10px;
+  }
+  .campaign-home-links {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .campaign-home-links button {
+    font-size: 11px;
+  }
+  .mission-workspace {
+    display: block;
+  }
+  .mission-navigation {
+    position: static;
+    padding: 20px 16px;
+    max-height: none;
+    overflow: visible;
+  }
+  .mission-navigation > p {
+    margin: 15px 0 4px;
+  }
+  .mission-navigation h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .mission-navigation nav {
+    display: flex;
+    overflow: auto;
+    gap: 8px;
+    padding-bottom: 5px;
+  }
+  .mission-navigation nav button {
+    min-width: 145px;
+    padding: 10px;
+    gap: 8px;
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+    background: #cce2e9;
+  }
+  .mission-navigation nav button.active {
+    border-bottom-color: #547f89;
+  }
+  .mission-navigation nav b {
+    font-size: 11px;
+  }
+  .mission-navigation nav small {
+    font-size: 8px;
+  }
+  .mission-navigation > .text-button {
+    margin-top: 13px;
+  }
+  .mission-main {
+    border: 0;
+    padding: 23px 16px 35px;
+  }
+  .mission-main h1 {
+    font-size: 25px;
+  }
+  .mission-main header > p {
+    font-size: 12px;
+  }
+  .campaign-metrics {
+    gap: 10px 17px;
+    font-size: 9px;
+    padding: 13px 0;
+  }
+  .campaign-metrics b {
+    font-size: 17px;
+  }
+  .metric-disclosure {
+    font-size: 8px;
+  }
+  .mission-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    margin: 21px 0;
+    background: #e5eef3;
+    padding: 0;
+  }
+  .mission-tabs button {
+    padding: 11px 4px;
+    font-size: 10px;
+  }
+  .mission-tab-content h3 {
+    font-size: 18px;
+  }
+  .carry-note {
+    font-size: 11px;
+    padding: 13px;
+  }
+  .evidence-block {
+    padding: 17px 15px;
+  }
+  .evidence-block h3 {
+    font-size: 17px;
+  }
+  .evidence-block p {
+    font-size: 11px;
+  }
+  .source-links a {
+    font-size: 9px;
+  }
+  .material-copy {
+    font-size: 12px;
+  }
+  .material-table {
+    font-size: 10px;
+  }
+  table {
+    font-size: 10px;
+    min-width: 380px;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+  .mission-concepts summary {
+    font-size: 12px;
+  }
+  .mission-concepts p {
+    font-size: 11px;
+  }
+  .decision-option {
+    padding: 16px 13px;
+    gap: 10px;
+  }
+  .decision-option h4 {
+    font-size: 14px;
+  }
+  .decision-option p {
+    font-size: 11px;
+  }
+  .decision-option small,
+  .effect-line {
+    font-size: 10px;
+  }
+  .campaign-question {
+    padding: 15px 11px;
+    margin: 23px 0;
+  }
+  .campaign-question legend {
+    font-size: 12px;
+    line-height: 1.9;
+    padding: 0 4px;
+  }
+  .question-options label,
+  .question-options button {
+    padding: 11px 10px;
+    font-size: 11px;
+  }
+  .numeric-answer input {
+    width: 140px;
+  }
+  .question-feedback {
+    font-size: 11px;
+    padding: 12px;
+  }
+  .ordering-selected {
+    font-size: 11px;
+  }
+  .report-answer textarea {
+    font-size: 12px;
+    padding: 13px;
+  }
+  .report-checks {
+    font-size: 11px;
+  }
+  .campaign-report,
+  .campaign-sources {
+    padding: 25px 17px 45px;
+  }
+  .campaign-report h1,
+  .campaign-sources h1 {
+    font-size: 26px;
+  }
+  .report-mission summary > span {
+    display: block;
+    float: none;
+    font-size: 9px;
+  }
+  .campaign-home-links {
+    padding-bottom: 10px;
+  }
+  .nav-item {
+    font-size: 8px;
+    padding-inline: 2px;
+  }
+}
+
+.metric-dictionary {
+  padding: 16px 19px;
+  background: #fff4da;
+  border: 1px solid #d8c697;
+  border-radius: 8px;
+  margin-bottom: 23px;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.metric-dictionary summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.metric-dictionary p {
+  margin: 12px 0;
+  color: #635b48;
+}
+.metric-dictionary b {
+  color: #534939;
+}

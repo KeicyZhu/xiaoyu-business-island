@@ -12,6 +12,8 @@ import {
   MAX_SAVE_BYTES,
 } from "./state.js";
 import { mountRunner } from "./runner.js";
+import { mountCampaigns } from "./campaigns-ui.js";
+import { caseSources } from "./campaign-sources.js";
 const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
 const KEY = "xiaoyu-island-save-v1",
   app = document.querySelector("#app"),
@@ -25,7 +27,7 @@ const esc = (s) =>
       ],
   );
 let state = createState(),
-  screen = "map",
+  screen = "twin",
   selected = 0,
   active = 0,
   stage = "learn",
@@ -37,6 +39,7 @@ let state = createState(),
   answered = false,
   cleanupRunner = null,
   island = null,
+  campaignUI = null,
   mapGeneration = 0,
   saveError = false;
 let pendingDraft = null,
@@ -104,7 +107,8 @@ const statusText = (p) =>
         ? "实战进行中"
         : "尚未探索";
 const navs = [
-  ["map", "⌁", "探险地图"],
+  ["twin", "✧", "双子岛"],
+  ["map", "⌁", "基础营地"],
   ["books", "▤", "我的宝典"],
   ["bag", "♧", "逃生背包"],
   ["review", "↻", "记忆营地"],
@@ -118,10 +122,11 @@ function motionLabel() {
   return state.settings.reducedMotion ? "◌ 减少动画：已开启" : "✧ 动画：开启";
 }
 function header() {
-  return `<header class="world-header"><a class="world-brand" href="#" data-screen="map"><span class="brand-spark" aria-hidden="true">✳</span><span>空降之商业女王<b>小玉</b><small>XIAOYU’S BUSINESS ISLAND</small></span></a><nav aria-label="主导航">${navs.map(([id, icon, name]) => `<button data-screen="${id}" class="nav-item ${screen === id ? "active" : ""}" ${screen === id ? 'aria-current="page"' : ""}><span>${icon}</span>${name}</button>`).join("")}</nav><button class="sound-toggle" data-action="motion" aria-label="${motionLabel()}" title="${motionLabel()}">${reducedMotion() ? "◌" : "✧"}<span>${motionPreference.matches ? "系统静态" : state.settings.reducedMotion ? "静态" : "动态"}</span></button></header>`;
+  return `<header class="world-header"><a class="world-brand" href="#" data-screen="twin"><span class="brand-spark" aria-hidden="true">✳</span><span>空降之商业女王<b>小玉</b><small>XIAOYU’S BUSINESS ISLAND</small></span></a><nav aria-label="主导航">${navs.map(([id, icon, name]) => `<button data-screen="${id}" class="nav-item ${screen === id ? "active" : ""}" ${screen === id ? 'aria-current="page"' : ""}><span>${icon}</span>${name}</button>`).join("")}</nav><button class="sound-toggle" data-action="motion" aria-label="${motionLabel()}" title="${motionLabel()}">${reducedMotion() ? "◌" : "✧"}<span>${motionPreference.matches ? "系统静态" : state.settings.reducedMotion ? "静态" : "动态"}</span></button></header>`;
 }
 function shell(content) {
   document.body.classList.toggle("screen-map", screen === "map");
+  document.body.classList.toggle("screen-twin", screen === "twin");
   app.innerHTML = `${header()}<main id="main" tabindex="-1">${screen !== "map" ? `<div class="inner-topline"><button data-screen="map">← 回到小岛</button><span>▤ ${getStats(state, lessons).books} 本宝典　✦ ${getStats(state, lessons).rewards} 件装备</span></div>` : ""}${content}${screen !== "map" ? '<footer class="page-footer"><span>带着好奇，向自由出发。</span><button data-action="about">关于这场冒险</button></footer>' : ""}</main>`;
   document.body.classList.toggle("reduce-motion", reducedMotion());
   const notice = document.createElement("div");
@@ -284,21 +289,30 @@ function reportView() {
     )}</section><section class="save-panel"><div><h2>给冒险留一份备份</h2><p>导出包含你输入的案例答案、版本、种子与作答记录。只保存在你的设备，不会上传。</p></div><div class="save-actions"><button class="button primary" data-action="export">导出学习存档 ↓</button><label class="button quiet file-label">导入存档 ↑<input id="import-save" type="file" accept="application/json,.json" aria-label="导入学习存档"></label><button class="button quiet" data-action="motion">${state.settings.reducedMotion ? "恢复动画" : "减少动画"}</button><button class="text-button danger" data-action="reset">重新开始旅程</button></div><small>课程 ${CURRICULUM_VERSION} · 规则 ${RULES_VERSION} · ${state.events.length} 条可回放记录</small></section>`;
 }
 function render() {
+  campaignUI?.dispose();
+  campaignUI = null;
   island?.dispose();
   island = null;
   const generation = ++mapGeneration;
   shell(
-    screen === "map"
-      ? mapView()
-      : screen === "books"
-        ? booksView()
-        : screen === "bag"
-          ? bagView()
-          : screen === "review"
-            ? reviewView()
-            : reportView(),
+    screen === "twin"
+      ? '<div id="campaign-root"></div>'
+      : screen === "map"
+        ? mapView()
+        : screen === "books"
+          ? booksView()
+          : screen === "bag"
+            ? bagView()
+            : screen === "review"
+              ? reviewView()
+              : reportView(),
   );
   if (screen === "map") mountMap(generation);
+  if (screen === "twin")
+    campaignUI = mountCampaigns(document.querySelector("#campaign-root"), {
+      reducedMotion: reducedMotion(),
+      toast,
+    });
 }
 function closeModal() {
   flushDraft();
@@ -366,7 +380,7 @@ function renderLesson() {
     body = `<div class="lesson-content"><div class="concept-meta"><span class="pill">${conceptIndex + 1} / ${l.concepts.length} 个概念</span><span>速通关键概念 · 收下你的宝典</span></div><h2 id="dialog-title" tabindex="-1">${esc(c.title)}</h2><p class="concept-definition">${esc(c.definition)}</p><div class="example-card"><span>✦ 小玉的理解</span><p>${esc(c.example)}</p></div><div class="pitfall"><b>别踩这个坑</b><p>${esc(c.pitfall)}</p></div><div class="lesson-controls"><button class="button quiet" data-action="concept-prev" ${conceptIndex === 0 ? "disabled" : ""}>← 上一个</button><button class="button primary" data-action="concept-next">${conceptIndex === l.concepts.length - 1 ? `领取${esc(l.book)} ↗` : "想明白了，下一个 →"}</button></div></div>`;
   } else if (stage === "case") {
     const c = l.caseStudy;
-    body = `<div class="lesson-content"><span class="pill">原创模拟案例 · 本地自查</span><h2 id="dialog-title" tabindex="-1">${esc(c.title)}</h2><p class="scenario">${esc(c.scenario)}</p><p class="case-prompt">${esc(c.prompt)}</p><label class="answer-label" for="case-answer">写下你的判断 <span>至少 20 字，可以不完美</span></label><textarea id="case-answer" maxlength="20000" placeholder="我的判断是…\n依据是…\n下一步我会…\n我会这样验证…">${esc(p.caseAnswer)}</textarea><p class="fineprint">自动保存草稿。本版不会用关键词假装判断答案质量。</p>${caseRevealed ? `<section class="case-feedback"><h3>对照一下自己的思路</h3><p>${esc(c.reference)}</p><div class="rubric">${c.rubric.map((r, i) => `<label><input type="checkbox" name="rubric" value="${i}"><span>${esc(r)}</span></label>`).join("")}</div><p class="fineprint">勾选你已理解或在答案中补充的要点，至少 3 项。该记录属于自评。</p><button class="button primary full" data-action="case-complete">保存自查，获得路线线索 ↗</button></section>` : `<button class="button primary full" data-action="case-reveal">写好了，查看参考思路 →</button>`}</div>`;
+    body = `<div class="lesson-content"><span class="pill">原创模拟案例 · 本地自查</span><h2 id="dialog-title" tabindex="-1">${esc(c.title)}</h2><p class="scenario">${esc(c.scenario)}</p>${l.caseEvidence ? `<div class="source-links">${l.caseEvidence.sourceIds.map((id) => (caseSources[id] ? `<a href="${esc(caseSources[id].url)}" target="_blank" rel="noopener noreferrer">${esc(caseSources[id].title)} ↗</a>` : "")).join("")}</div><p class="fineprint">${esc(l.caseEvidence.scope)}</p>` : ""}<p class="case-prompt">${esc(c.prompt)}</p><label class="answer-label" for="case-answer">写下你的判断 <span>至少 20 字，可以不完美</span></label><textarea id="case-answer" maxlength="20000" placeholder="我的判断是…\n依据是…\n下一步我会…\n我会这样验证…">${esc(p.caseAnswer)}</textarea><p class="fineprint">自动保存草稿。本版不会用关键词假装判断答案质量。</p>${caseRevealed ? `<section class="case-feedback"><h3>对照一下自己的思路</h3><p>${esc(c.reference)}</p><div class="rubric">${c.rubric.map((r, i) => `<label><input type="checkbox" name="rubric" value="${i}"><span>${esc(r)}</span></label>`).join("")}</div><p class="fineprint">勾选你已理解或在答案中补充的要点，至少 3 项。该记录属于自评。</p><button class="button primary full" data-action="case-complete">保存自查，获得路线线索 ↗</button></section>` : `<button class="button primary full" data-action="case-reveal">写好了，查看参考思路 →</button>`}</div>`;
   } else {
     const entry = queue[questionIndex];
     if (!entry) {
@@ -713,6 +727,7 @@ dialog.addEventListener("click", (e) => {
 motionPreference.addEventListener("change", () => {
   document.body.classList.toggle("reduce-motion", reducedMotion());
   island?.setReducedMotion(reducedMotion());
+  campaignUI?.setReducedMotion(reducedMotion());
   app.querySelectorAll(".sound-toggle").forEach((button) => {
     button.setAttribute("aria-label", motionLabel());
     button.title = motionLabel();
@@ -723,6 +738,8 @@ window.addEventListener("pagehide", () => {
   flushDraft();
   island?.dispose();
   island = null;
+  campaignUI?.dispose();
+  campaignUI = null;
 });
 window.addEventListener("pageshow", (event) => {
   if (event.persisted) render();
