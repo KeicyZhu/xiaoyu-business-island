@@ -1021,3 +1021,349 @@ tbody tr:last-child td {
 .metric-dictionary b {
   color: #534939;
 }
+
+/* One continuous sea chart: labels belong to land, never to separate cards. */
+.archipelago-home {
+  background: #80d2df;
+  color: #163f4a;
+  min-height: calc(100svh - 88px);
+  overflow: clip;
+}
+.archipelago-intro {
+  padding: 34px max(5vw, 22px) 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  align-items: center;
+  background: linear-gradient(#d0eff1, #a6e2e8 78%, #80d2df);
+}
+.archipelago-eyebrow {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  color: #427481;
+}
+.archipelago-intro h1 {
+  font-family: "STKaiti", "Kaiti SC", "Songti SC", serif;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.3;
+  letter-spacing: 1px;
+  margin: 10px 0;
+  color: #174650;
+}
+.archipelago-intro p {
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0;
+  color: #366673;
+}
+.journey-passport {
+  width: 320px;
+  padding-left: 26px;
+  border-left: 1px solid #6caebb88;
+}
+.journey-passport > span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 12px;
+}
+.journey-passport strong {
+  font-size: 17px;
+  font-weight: 650;
+  display: block;
+  margin-bottom: 9px;
+}
+.journey-passport i {
+  font-style: normal;
+  padding-inline: 7px;
+  color: #3c8290;
+}
+.journey-passport small {
+  font-size: 10px;
+  color: #346777;
+}
+.journey-meter {
+  height: 4px;
+  background: #62b7c480;
+  margin: 13px 0 9px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.journey-meter i {
+  height: 100%;
+  display: block;
+  background: #237768;
+  padding: 0;
+}
+.archipelago-map {
+  position: relative;
+  height: min(62vw, 740px);
+  min-height: 580px;
+  isolation: isolate;
+}
+.archipelago-scene {
+  position: absolute;
+  inset: 0;
+}
+.archipelago-map-caption {
+  position: absolute;
+  top: 24px;
+  left: 5vw;
+  pointer-events: none;
+  color: #205b67;
+}
+.archipelago-map-caption span {
+  font-size: 8px;
+  letter-spacing: 3px;
+  display: block;
+  opacity: 0.7;
+  margin-bottom: 7px;
+}
+.archipelago-map-caption b {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+.island-destination {
+  position: absolute;
+  z-index: 2;
+  width: max-content;
+  max-width: min(245px, 78vw);
+  text-align: center;
+  transform: translate(-50%, 0);
+  filter: drop-shadow(0 2px 8px #389caf35);
+}
+.destination-learning {
+  left: 25%;
+  top: 67%;
+}
+.destination-double11 {
+  left: 72%;
+  top: 79%;
+}
+.destination-brand {
+  left: 70%;
+  top: 36%;
+}
+.island-chapter {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  margin-bottom: 6px;
+  color: #194e56;
+  text-shadow: 0 1px 5px #d5ffff;
+}
+.island-destination button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: auto;
+  padding: 11px 18px;
+  min-height: 44px;
+  border: 1px solid #c8f4ec;
+  border-radius: 30px;
+  color: #174b4f;
+  background: #effff4e8;
+  box-shadow:
+    0 3px 0 #3a8b8b30,
+    inset 0 1px 0 #ffffff;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.island-destination button b {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.island-destination button > span {
+  font-size: 18px;
+  color: #2c796a;
+}
+.island-destination button:hover,
+.island-destination button:focus-visible {
+  transform: translateY(-3px);
+  background: #fff;
+  outline: 2px solid #1b716b;
+  outline-offset: 4px;
+}
+.island-destination small {
+  display: block;
+  font-size: 10px;
+  margin-top: 8px;
+  color: #164951;
+  text-shadow: 0 1px 5px #e4ffff;
+}
+.destination-learning button {
+  background: #f5fbd5ed;
+  border-color: #e6f7b9;
+}
+.destination-brand button {
+  background: #f9ead9eb;
+  border-color: #fff3e2;
+}
+.island-destination.is-locked button {
+  border-style: dashed;
+}
+.archipelago-compass {
+  position: absolute;
+  right: 4vw;
+  bottom: 30px;
+  color: #296f7f;
+  font-size: 27px;
+  line-height: 1.3;
+  text-align: center;
+}
+.archipelago-compass::first-line {
+  font-size: 10px;
+}
+.archipelago-scene-status {
+  position: absolute;
+  bottom: 0;
+  left: 5vw;
+  font-size: 11px;
+  max-width: 65%;
+}
+.archipelago-scene-status:empty {
+  display: none;
+}
+.archipelago-footer {
+  padding: 20px 5vw 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #b6e5e9;
+  border-top: 1px solid #bdebf0;
+}
+.archipelago-footer p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #285c68;
+}
+.archipelago-footer small {
+  font-size: 10px;
+  opacity: 0.85;
+}
+.archipelago-footer .campaign-home-links {
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.archipelago-footer .campaign-home-links button {
+  font-size: 11px;
+  color: #215968;
+}
+.archipelago-scene.scene-unavailable {
+  background:
+    radial-gradient(ellipse at 25% 55%, #75b995 0 15%, transparent 16%),
+    radial-gradient(ellipse at 73% 68%, #83b49a 0 13%, transparent 14%),
+    radial-gradient(ellipse at 70% 28%, #699987 0 13%, transparent 14%),
+    repeating-radial-gradient(
+      ellipse at 50% 50%,
+      #72cbd6,
+      #93deea 4%,
+      #72cbd6 8%
+    );
+}
+.archipelago-scene.scene-unavailable canvas {
+  visibility: hidden;
+}
+@media (max-width: 700px) {
+  .archipelago-intro {
+    padding: 24px 22px 16px;
+    display: block;
+  }
+  .archipelago-eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+  .archipelago-intro h1 {
+    font-size: clamp(25px, 7.5vw, 30px);
+    margin-top: 10px;
+  }
+  .archipelago-intro p {
+    font-size: 11px;
+  }
+  .journey-passport {
+    border: 0;
+    padding: 18px 0 0;
+    width: 100%;
+  }
+  .journey-passport > span,
+  .journey-passport p {
+    display: none;
+  }
+  .journey-passport strong {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+  .journey-meter {
+    margin: 8px 0 5px;
+  }
+  .journey-passport small {
+    font-size: 9px;
+  }
+  .archipelago-map {
+    height: 900px;
+    min-height: 0;
+  }
+  .archipelago-map-caption {
+    top: 15px;
+    left: 22px;
+  }
+  .archipelago-map-caption b {
+    display: none;
+  }
+  .island-destination {
+    max-width: 215px;
+  }
+  .island-destination button {
+    padding: 9px 12px;
+    gap: 8px;
+  }
+  .island-destination button b {
+    font-size: 13px;
+  }
+  .island-chapter,
+  .island-destination small {
+    font-size: 9px;
+  }
+  .destination-learning {
+    left: 45%;
+    top: 24%;
+  }
+  .destination-double11 {
+    left: 53%;
+    top: 55%;
+  }
+  .destination-brand {
+    left: 44%;
+    top: 83%;
+  }
+  .archipelago-footer {
+    display: block;
+    padding: 18px 22px 30px;
+  }
+  .archipelago-footer p {
+    font-size: 11px;
+  }
+  .archipelago-footer .campaign-home-links {
+    justify-content: flex-start;
+    margin-top: 13px;
+    gap: 15px;
+  }
+  .archipelago-footer .campaign-home-links button {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .island-destination button {
+    transition: none;
+  }
+}

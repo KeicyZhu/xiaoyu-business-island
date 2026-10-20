@@ -107,8 +107,8 @@ const statusText = (p) =>
         ? "实战进行中"
         : "尚未探索";
 const navs = [
-  ["twin", "✧", "双子岛"],
-  ["map", "⌁", "基础营地"],
+  ["twin", "✧", "三岛地图"],
+  ["map", "⌁", "学习岛"],
   ["books", "▤", "我的宝典"],
   ["bag", "♧", "逃生背包"],
   ["review", "↻", "记忆营地"],
@@ -311,6 +311,7 @@ function render() {
   if (screen === "twin")
     campaignUI = mountCampaigns(document.querySelector("#campaign-root"), {
       reducedMotion: reducedMotion(),
+      learningState: state,
       toast,
     });
 }
@@ -328,6 +329,7 @@ function showDialog(html) {
   cleanupRunner = null;
   dialog.innerHTML = html;
   island?.setPaused?.(true);
+  campaignUI?.setPaused(true);
   if (!dialog.open) dialog.showModal();
   dialog.querySelector("h2")?.focus();
 }
@@ -451,7 +453,7 @@ function afterRun() {
     showDialog(
       modalFrame(
         "小玉，欢迎来到更大的世界。",
-        `<div class="modal-body center ending"><img src="./assets/xiaoyu.svg" alt="完成旅程的小玉"><span class="eyebrow">THE ISLAND WAS ONLY THE BEGINNING</span><h3>不是突然变厉害，<br>是每一步都没有白走。</h3><p>你已完成 ${lessons.length} 个地区的首轮学习。<br>带着宝典与装备逃离商业岛，下一站是新的问题与实践。</p><button class="button primary" data-action="ending-report">打开我的旅行手账 ↗</button><p class="fineprint">首通不等于长期掌握。记得回来复习，用新情境检验自己。</p></div>`,
+        `<div class="modal-body center ending"><img src="./assets/xiaoyu.svg" alt="完成旅程的小玉"><span class="eyebrow">THE ISLAND WAS ONLY THE BEGINNING</span><h3>不是突然变厉害，<br>是每一步都没有白走。</h3><p>你已完成 ${lessons.length} 个地区的首轮学习。<br>两座实战岛已解锁：跨境电商双十一实战、品牌出海实战。</p><button class="button primary" data-action="ending-practice">前往实战双岛 ↗</button><button class="text-button" data-action="ending-report">打开我的旅行手账</button><p class="fineprint">首通不等于长期掌握。记得回来复习，用新情境检验自己。</p></div>`,
       ),
     );
   } else {
@@ -490,6 +492,14 @@ function showInfo(kind) {
   );
 }
 function handleAction(action) {
+  if (action === "ending-practice") {
+    closeModal();
+    screen = "twin";
+    render();
+    window.scrollTo(0, 0);
+    return;
+  }
+
   const l = lessons[active];
   switch (action) {
     case "map-left":
