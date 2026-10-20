@@ -74,3 +74,18 @@ campaigns-data.js 聚合两条任务和公开来源；campaigns-state.js 管理�
 real-case-lessons.js 更新原基础营地的11案例；旧存档键与规则保持。assets/gtm只有两张PNG加入精确白名单，不开放任意图片路径。
 
 check-twin.mjs验证16阶段96题真实UI全流程，check-twin-layout.mjs覆盖手机四步骤与图片白名单。新主线没有跑酷。
+
+## v0.5 三岛旅程
+
+`archipelago-scene.js` 在单画布中创建不同轮廓的三个岛及统一海面，负责标签坐标投影、响应式相机、低动态、暂停、WebGL降级与资源释放。原 `island-scene.js` 继续承载学习岛内部11地标地图。
+
+`journey.js` 从已验证的学习存档派生11关门槛，`reducePractice` 只允许毕业后产生新实战事件。`campaigns-state.js` 保持原存档回放规则，兼容以前记录。导入实战档案不会代替学习通关；重置学习会重新锁定实战，但不删除项目记录。此为客户端学习流程，不是权限服务。
+
+浏览器QA在隔离测试资料中，通过合法学习事件准备前置状态，然后逐项实际操作实战界面；测试准备不是游戏后门，也不是演示录像。为使旧完整链路脚本兼容前置门槛，先组合共享fixture，再使用已安装的Playwright CLI运行：
+
+```sh
+node tools/compose-browser-check.mjs journey
+playwright-cli run-code --filename=output/playwright/check-journey-run.mjs
+```
+
+将`journey`替换为`archipelago`、`twin`、`twin-layout`、`twin-quota`、`twin-recovery`，分别验证三岛构图与WebGL恢复、16阶段全流程、响应式任务页、配额失败、损坏存档保护。先`npm run dev`，浏览器使用本地4173端口。`npm test`另包含纯状态门控与旧档案回放测试。

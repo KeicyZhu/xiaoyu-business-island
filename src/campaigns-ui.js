@@ -1,7 +1,6 @@
 import { campaigns, caseSources } from "./campaigns-data.js";
 import {
   createCampaignState,
-  reduceCampaign,
   assessMission,
   campaignMetrics,
   isMissionUnlocked,
@@ -9,7 +8,9 @@ import {
   deserializeCampaign,
   CAMPAIGN_MAX_BYTES,
 } from "./campaigns-state.js";
-import { mountIsland } from "./island-scene.js";
+import { mountArchipelago } from "./archipelago-scene.js";
+import { lessons } from "./curriculum.js";
+import { getJourneyProgress, reducePractice } from "./journey.js";
 const KEY = "xiaoyu-twin-campaign-v1";
 const esc = (s) =>
   String(s ?? "").replace(
@@ -30,8 +31,11 @@ const TYPES = {
 let memorySession = null;
 export function mountCampaigns(
   root,
-  { reducedMotion = false, toast = () => {} } = {},
+  { reducedMotion = false, toast = () => {}, learningState = null } = {},
 ) {
+  const journey = getJourneyProgress(learningState, lessons);
+  const applyPractice = (state, event, tracks) =>
+    reducePractice(state, event, tracks, learningState, lessons);
   let state = createCampaignState(),
     campaign = null,
     missionIndex = 0,
@@ -40,6 +44,7 @@ export function mountCampaigns(
     graded = false,
     scenes = [],
     generation = 0,
+    paused = false,
     saveFailed = false,
     disposed = false,
     unreadableRaw = null;
@@ -55,7 +60,7 @@ export function mountCampaigns(
         unreadableRaw = localStorage.getItem(KEY);
       } catch {}
       toast(
-        "双岛存档未能读取，已暂停覆盖。请先导出原始文件，再确认重置；基础营地不受影响。",
+        "双岛存档未能读取，已暂停覆盖。请先导出原始文件，再确认重置；学习岛不受影响。",
       );
     }
   const c = () => campaigns.find((x) => x.id === campaign);
@@ -78,15 +83,15 @@ export function mountCampaigns(
       saveFailed = false;
     } catch {
       saveFailed = true;
-      toast("双岛任务进度未保存，请先导出备份。");
+      toast("实战任务进度未保存，请先导出备份。");
     }
     const warning = root.querySelector("[data-save-warning]");
     if (warning) warning.hidden = !saveFailed;
     memorySession = { state, saveFailed, unreadableRaw };
   }
   function updateDraft(patch) {
-    if (!m() || state.completed[m().id]) return;
-    const next = reduceCampaign(
+    if (!journey.practiceUnlocked || !m() || state.completed[m().id]) return;
+    const next = applyPractice(
       state,
       {
         type: "DRAFT",
@@ -151,17 +156,31 @@ export function mountCampaigns(
     return `<div class="campaign-metrics"><span>剩余项目预算 <b>${s.budget}</b> ${esc(campaign.unit)}</span><span>上线准备 <b>${s.readiness}</b>/100</span><span>体验与信任 <b>${s.trust}</b>/100</span><span>已交付 <b>${s.completed}</b>/${campaign.missions.length}</span></div>`;
   }
   function home() {
-    return `<section class="twin-home"><header class="twin-intro"><span>FROM KNOWING TO DOING</span><h1>两座岛，两场真正要想明白的生意。</h1><p>一边负责 TikTok Shop 用户增长，一边带中国蟹黄酱走向海外。<br>从现实案例出发，用证据、数字与连续决策完成全链路任务。</p></header><div class="campaign-islands">${campaigns
-      .map((track, i) => {
-        const stats = campaignMetrics(state, track);
-        return `<article class="campaign-island campaign-${track.id}"><div class="campaign-scene" data-campaign-scene="${track.id}" aria-hidden="true"></div><div class="campaign-identity"><span>0${i + 1} / ${esc(track.role)}</span><h2>${esc(track.title)}</h2><p>${esc(track.subtitle)}</p><button class="button primary" data-c-act="enter" data-track="${track.id}">${stats.completed === track.missions.length ? "回看已完成任务" : stats.completed ? "继续项目" : "接受任务"} <span>↗</span></button><small>${stats.completed} / ${track.missions.length} 阶段 · ${track.missions.reduce((n, m) => n + m.questions.length, 0)} 道实战题</small></div></article>`;
-      })
-      .join(
-        "",
-      )}</div><div class="twin-note"><span>事实有出处，推演有边界。</span><p>平台案例可查原文；任务预算、转化表与决策变化均为教学仿真，不是企业内部数据或收益预测。开放方案采用自查，不冒充 AI 评分。</p></div><div class="campaign-home-links"><button data-screen="map">先去基础营地复习 11 关 →</button><button data-c-act="report">我的双岛任务档案 →</button><button data-c-act="sources">查看案例与资料来源 →</button></div></section>`;
+    return `<section class="archipelago-home"><header class="archipelago-intro"><div><span class="archipelago-eyebrow">XIAOYU’S ISLANDS · 从知识到实战</span><h1>零经验空降，<br>也能成为商业女王！</h1><p>和小玉一起拾起知识、破解商业谜题。<br>集齐逃生装备，把未知的小岛走成自己的地图。</p></div><div class="journey-passport"><span>你的探索航线</span><strong>01 学习岛 <i>→</i> 02 实战双岛</strong><p>${journey.practiceUnlocked ? "学习已通关，两条实战航线已开放。" : `先完成学习岛，再带着知识去实战。`}</p><div class="journey-meter"><i style="width:${(journey.completed / journey.total) * 100}%"></i></div><small>学习进度 ${journey.completed} / ${journey.total} 关 · 实战各 8 阶段</small></div></header>
+      <div class="archipelago-map" aria-label="三岛地图：学习岛通关后开放两座实战岛">
+        <div class="archipelago-scene" aria-hidden="true"></div>
+        <div class="archipelago-map-caption"><span>THE LEARNING ARCHIPELAGO</span><b>一片海，三段成长旅程</b></div>
+        <div class="island-destination destination-learning" data-destination="learning"><span class="island-chapter">01 · 巴厘海湾</span><button data-screen="map"><b>学习岛</b><span>↗</span></button><small>${journey.completed} / ${journey.total} 关 · ${journey.practiceUnlocked ? "已通关，可随时复习" : journey.completed ? "继续学习，点亮新地标" : "从这里出发"}</small></div>
+        ${campaigns
+          .map((track, i) => {
+            const stats = campaignMetrics(state, track);
+            const status = journey.practiceUnlocked
+              ? stats.completed === track.missions.length
+                ? "已完成 · 回看任务"
+                : stats.completed
+                  ? `继续实战 · ${stats.completed}/8 阶段`
+                  : "航线已开放 · 开始实战"
+              : `学习通关后开启 · ${journey.completed}/${journey.total}`;
+            return `<div class="island-destination destination-${track.id} ${journey.practiceUnlocked ? "is-open" : "is-locked"}" data-destination="${track.id}"><span class="island-chapter">02${i === 0 ? "A · 佩尼达海崖" : "B · 火山港湾"}</span><button data-c-act="enter" data-track="${track.id}" aria-label="${esc(track.title)}，${esc(status)}" aria-disabled="${!journey.practiceUnlocked}"><b>${esc(track.title)}</b><span>${journey.practiceUnlocked ? "↗" : "⌁"}</span></button><small>${esc(status)}</small></div>`;
+          })
+          .join("")}
+        <span class="archipelago-compass" aria-hidden="true">N<br>✧</span>
+        <p class="archipelago-scene-status" role="status"></p>
+      </div>
+      <div class="archipelago-footer"><p>${journey.practiceUnlocked ? "两条实战可以自由选择，进度分别保存。" : "岛名始终可见；完成学习岛 11 关后，两条实战航线同时开放。"}<br><small>现实案例有出处，任务数据为教学仿真。跑酷可跳过。</small></p><div class="campaign-home-links"><button data-c-act="report">实战任务档案与备份 ↗</button><button data-c-act="sources">案例与资料来源 ↗</button></div></div></section>`;
   }
   function sidebar() {
-    return `<aside class="mission-navigation"><button class="mission-back" data-c-act="home">← 返回双子岛</button><p>${esc(c().role)}</p><h2>${esc(c().title)}</h2><nav aria-label="任务阶段">${c()
+    return `<aside class="mission-navigation"><button class="mission-back" data-c-act="home">← 返回三岛地图</button><p>${esc(c().role)}</p><h2>${esc(c().title)}</h2><nav aria-label="任务阶段">${c()
       .missions.map(
         (mission, i) =>
           `<button data-c-act="stage" data-index="${i}" class="${i === missionIndex ? "active" : ""}" ${isMissionUnlocked(state, c(), i) ? "" : "disabled"} ${i === missionIndex ? 'aria-current="step"' : ""}><span>${state.completed[mission.id] ? "✓" : String(i + 1).padStart(2, "0")}</span><span><b>${esc(mission.title)}</b><small>${esc(mission.phase)}</small></span></button>`,
@@ -268,7 +287,7 @@ export function mountCampaigns(
       )}</nav><div class="mission-tab-content">${tab === "brief" ? brief() : tab === "decision" ? decision() : tab === "questions" ? questions() : deliverable()}</div></section></div>`;
   }
   function report() {
-    return `<section class="campaign-report"><button data-c-act="home" class="text-button">← 返回双子岛</button><h1>你的两份项目档案</h1><p>以下是选择、交付物与教学资源的记录。实战题可自动核验，文字方案仍需自己或导师审阅。</p>${campaigns
+    return `<section class="campaign-report"><button data-c-act="home" class="text-button">← 返回三岛地图</button><h1>你的两份项目档案</h1><p>以下是选择、交付物与教学资源的记录。实战题可自动核验，文字方案仍需自己或导师审阅。</p>${campaigns
       .map(
         (track) =>
           `<section><h2>${esc(track.title)}</h2>${metricStrip(track)}${track.missions
@@ -284,10 +303,10 @@ export function mountCampaigns(
       )
       .join(
         "",
-      )}<div class="campaign-save-tools"><button class="button primary" data-c-act="export">导出双岛任务档案 ↓</button><label class="button quiet">导入双岛存档<input type="file" data-c-import accept=".json,application/json"></label><button class="text-button" data-c-act="reset">重新开始双岛任务</button></div><p class="fineprint">双岛存档与基础营地分开保存。导出包含自己输入的方案，请自行保管；不上传服务器。</p></section>`;
+      )}<div class="campaign-save-tools"><button class="button primary" data-c-act="export">导出实战任务档案 ↓</button><label class="button quiet">导入双岛存档<input type="file" data-c-import accept=".json,application/json"></label><button class="text-button" data-c-act="reset">重新开始实战任务</button></div><p class="fineprint">双岛存档与学习岛分开保存。导出包含自己输入的方案，请自行保管；不上传服务器。</p></section>`;
   }
   function sources() {
-    return `<section class="campaign-sources"><button data-c-act="home" class="text-button">← 返回双子岛</button><h1>现实案例与资料依据</h1><p>真实企业案例为训练提供事实背景，不代表其内部项目授权、因果证明或当前全市场规则。</p>${Object.values(
+    return `<section class="campaign-sources"><button data-c-act="home" class="text-button">← 返回三岛地图</button><h1>现实案例与资料依据</h1><p>真实企业案例为训练提供事实背景，不代表其内部项目授权、因果证明或当前全市场规则。</p>${Object.values(
       caseSources,
     )
       .map(
@@ -306,23 +325,47 @@ export function mountCampaigns(
       const token = generation;
       requestAnimationFrame(() => {
         if (disposed || token !== generation) return;
-        root.querySelectorAll("[data-campaign-scene]").forEach((el) => {
-          try {
-            const scene = mountIsland(el, {
-              nodes: [],
-              variant: el.dataset.campaignScene,
-              reducedMotion,
-            });
-            if (scene) scenes.push(scene);
-            else el.classList.add("scene-unavailable");
-          } catch {
-            el.classList.add("scene-unavailable");
-          }
-        });
+        const el = root.querySelector(".archipelago-scene");
+        try {
+          const scene = mountArchipelago(el, {
+            reducedMotion,
+            onProject(points) {
+              for (const [id, point] of Object.entries(points)) {
+                const label = root.querySelector(`[data-destination="${id}"]`);
+                if (!label) continue;
+                label.style.left = `${point.x}%`;
+                label.style.top = `${point.y}%`;
+              }
+            },
+            onStatus(message) {
+              const status = root.querySelector(".archipelago-scene-status");
+              if (status)
+                status.textContent =
+                  message === "fallback"
+                    ? "3D 海图暂不可用，仍可通过岛屿入口继续旅程。"
+                    : "";
+              el.classList.toggle("scene-unavailable", message === "fallback");
+              if (message === "fallback")
+                root.querySelectorAll("[data-destination]").forEach((label) => {
+                  label.style.removeProperty("left");
+                  label.style.removeProperty("top");
+                });
+            },
+          });
+          if (scene) {
+            scene.setPaused(paused);
+            scenes.push(scene);
+          } else el.classList.add("scene-unavailable");
+        } catch {
+          el.classList.add("scene-unavailable");
+          root.querySelector(".archipelago-scene-status").textContent =
+            "当前设备无法显示 3D 海图，可通过岛屿入口继续旅程。";
+        }
       });
     }
   }
   function showMission(track, index) {
+    if (!journey.practiceUnlocked) return;
     campaign = track;
     missionIndex = index;
     tab = "brief";
@@ -339,6 +382,17 @@ export function mountCampaigns(
     const b = e.target.closest("[data-c-act]");
     if (!b || b.disabled || !root.contains(b)) return;
     const action = b.dataset.cAct;
+    if (
+      !journey.practiceUnlocked &&
+      ["enter", "stage", "next", "complete", "order", "order-reset"].includes(
+        action,
+      )
+    ) {
+      toast(
+        `先完成学习岛的 ${journey.total} 关，再开启实战。当前 ${journey.completed}/${journey.total} 关，原实战记录仍保留在任务档案中。`,
+      );
+      return;
+    }
     if (action === "home") {
       view = "home";
       render();
@@ -396,7 +450,7 @@ export function mountCampaigns(
         );
         return;
       }
-      const next = reduceCampaign(
+      const next = applyPractice(
         state,
         { type: "COMPLETE", campaignId: campaign, missionId: m().id },
         campaigns,
@@ -441,7 +495,7 @@ export function mountCampaigns(
     }
     if (
       action === "reset" &&
-      confirm("清除两条任务线的进度和方案？基础营地不受影响。建议先导出备份。")
+      confirm("清除两条任务线的进度和方案？学习岛不受影响。建议先导出备份。")
     ) {
       unreadableRaw = null;
       state = createCampaignState();
@@ -479,15 +533,15 @@ export function mountCampaigns(
       if (!f) return;
       try {
         if (f.size > CAMPAIGN_MAX_BYTES)
-          throw new Error("请选择2MiB以内的双岛任务存档");
+          throw new Error("请选择2MiB以内的实战任务存档");
         const loaded = deserializeCampaign(await f.text(), campaigns);
         if (disposed) return;
-        if (!confirm("导入将替换当前双岛任务进度，是否继续？")) return;
+        if (!confirm("导入将替换当前实战任务进度，是否继续？")) return;
         unreadableRaw = null;
         state = loaded;
         persist();
         render();
-        toast("双岛任务已恢复");
+        toast("实战任务已恢复");
       } catch (error) {
         toast(error.message);
       }
@@ -509,6 +563,10 @@ export function mountCampaigns(
     setReducedMotion(value) {
       reducedMotion = value;
       scenes.forEach((s) => s.setReducedMotion(value));
+    },
+    setPaused(value) {
+      paused = Boolean(value);
+      scenes.forEach((s) => s.setPaused(paused));
     },
   };
 }

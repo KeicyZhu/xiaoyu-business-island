@@ -1,6 +1,6 @@
 {
-  "version": "0.4.0",
-  "updated_at": "2026-10-19",
+  "version": "0.5.0",
+  "updated_at": "2026-10-20",
   "target_audience": "零经验接触商业化与出海业务的学习者",
   "artifact_audit": {
     "original_inventory_items": 27,
@@ -269,5 +269,15 @@
       "unique_titles": 80,
       "limitations": "目录错配、重复及未证实数字均经教学校订"
     }
-  ]
+  ],
+  "journey": {
+    "islands": 3,
+    "learning_required_chapters": 11,
+    "practice_unlock": "both_after_learning",
+    "practice_names": [
+      "跨境电商双十一实战",
+      "品牌出海实战"
+    ],
+    "parkour_required": false
+  }
 }

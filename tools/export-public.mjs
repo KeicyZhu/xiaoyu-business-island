@@ -32,6 +32,7 @@ const files = [
   "THIRD_PARTY_NOTICES.txt",
   "docs/PRD.md",
   "docs/product/twin-campaigns.md",
+  "docs/design/three-island-plan.md",
   "docs/design/twin-real-case-sources.md",
   "docs/implementation/gtm-image-provenance.json",
   "assets/gtm/annual-plan.png",
@@ -54,6 +55,8 @@ const files = [
   "docs/deployment/pages-workflow.yml",
   "docs/deployment/verify-workflow.yml",
   "docs/images/desktop.png",
+  "docs/images/archipelago.png",
+  "docs/images/archipelago-mobile.png",
   "docs/images/mobile.png",
 ];
 async function collect(folder, pattern) {
@@ -123,7 +126,7 @@ await writeFile(
   path.join(destination, "PUBLIC_MANIFEST.json"),
   JSON.stringify(
     {
-      version: "0.4.0",
+      version: "0.5.0",
       sourceCommit,
       exportedAt: new Date().toISOString(),
       note: "Reviewed public source snapshot. Original private research and local conversation history are not included. Subsequent public releases retain their own Git history.",

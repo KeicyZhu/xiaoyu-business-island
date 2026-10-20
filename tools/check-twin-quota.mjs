@@ -14,6 +14,7 @@ async function checkTwinQuota(page) {
       };
     });
     await scratch.goto("http://127.0.0.1:4173/");
+    await prepareLearningFixture(scratch);
     await scratch
       .locator('[data-track="double11"]')
       .click({ noWaitAfter: true, timeout: 60000 });

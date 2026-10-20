@@ -1,7 +1,7 @@
 {
-  "version": "0.4.0",
-  "sourceCommit": "1c166c3ec76c820deae40e052676c73fa62fa3fb",
-  "exportedAt": "2026-10-19T09:51:25.747Z",
+  "version": "0.5.0",
+  "sourceCommit": "5691ca58221f8e1bc9e83bf75c74c3d8d4bbc81d",
+  "exportedAt": "2026-10-20T01:21:07.169Z",
   "note": "Reviewed public source snapshot. Original private research and local conversation history are not included. Subsequent public releases retain their own Git history.",
   "files": [
     {
@@ -14,11 +14,11 @@
     },
     {
       "path": "CHANGELOG.md",
-      "sha256": "6cd0f3850dd3ef6deada6db2ff4c7f8444baa2986a9c21d8294140360574c850"
+      "sha256": "19bca602322aa83c67faaa7af5bca8a584719c4256e84f8585dba988346769b5"
     },
     {
       "path": "README.md",
-      "sha256": "8d2da52c418171151ade00ca2fdf25bc08a8e9f522e6e1261237cb49d59e5b2b"
+      "sha256": "1c4e1725b7799334a2862198063e2492de8d2cf8d6837d7cc322b66eb0347e77"
     },
     {
       "path": "RIGHTS.md",
@@ -54,11 +54,11 @@
     },
     {
       "path": "docs/PLAY_GUIDE.md",
-      "sha256": "162d8b400dcaa204013f187ff37df13c2d2f9312ddf3b7dea6c391dcee5be7b6"
+      "sha256": "1f36214520afafb06a7cf58064f304e80f9038b760f2311f03e63854d0779b2d"
     },
     {
       "path": "docs/PRD.md",
-      "sha256": "746c39f6f3c4836a7a00296cf456ac265e2078d55a740d560cccf9d8477a9890"
+      "sha256": "e76ba3c567982a2487ad4a6a4536709b844acd3ad91848b59b415266f381fd25"
     },
     {
       "path": "docs/deployment/README.md",
@@ -73,8 +73,20 @@
       "sha256": "2db973b345694daf84ca3ac76da98003016b9596e7381518e5eb50b42ddc6504"
     },
     {
+      "path": "docs/design/three-island-plan.md",
+      "sha256": "d0b21292cb61a617426a77c9c8a3f9064fdde1928a36e5bd2b7c6ca3a189acbd"
+    },
+    {
       "path": "docs/design/twin-real-case-sources.md",
       "sha256": "9e2d8b7d064a4a78ee0566caadb5bf0776e6a94454e5a95f6849bb3b84869e0b"
+    },
+    {
+      "path": "docs/images/archipelago-mobile.png",
+      "sha256": "728d566ee035764a6c1cc5c530caecc2917e85ac4b2a116585856189085a619f"
+    },
+    {
+      "path": "docs/images/archipelago.png",
+      "sha256": "37425dde389c0c2a7f26cc21874d5dacbf76edd7ea30de05f4a76b0bcb53c7d5"
     },
     {
       "path": "docs/images/desktop.png",
@@ -90,7 +102,7 @@
     },
     {
       "path": "docs/knowledge/README.md",
-      "sha256": "581b2efd22874e2ba369a274a0823bf5d6cf73369b4678a84a9266908f239758"
+      "sha256": "e7dfa8eacf1543427983082e25f4d7387878dac1380e81df532cdab837cf751c"
     },
     {
       "path": "docs/knowledge/advanced-handbook.md",
@@ -102,7 +114,7 @@
     },
     {
       "path": "docs/knowledge/catalog.json",
-      "sha256": "59c44281a4985d1c8eccf853b54fdba10eae39dc1e8fa0eb101c664354f88401"
+      "sha256": "0267fbcb421ebc1c6c6b41fe886b5c7a7ee61e47948044a059ebe5f18e3df5bd"
     },
     {
       "path": "docs/knowledge/corrections.md",
@@ -130,43 +142,47 @@
     },
     {
       "path": "docs/product/architecture.md",
-      "sha256": "86d8b0ec81900bc82740c38cda5b552a20bf084deb3ef80c97c7bcec3ae1b609"
+      "sha256": "020b1b53f0301d786a35b99105a768e66811b4765be16216f9157a7db6ba4ba1"
     },
     {
       "path": "docs/product/game-map.json",
-      "sha256": "d52b19b13150c58b526a625100aa4f22d54ccc217b3145c4ad1337cf542cb6fe"
+      "sha256": "f0188b2f549325f2a42544369f5cab77df4b3ba56943b0c594d2a0182cd83501"
     },
     {
       "path": "docs/product/game-map.md",
-      "sha256": "e0709c0dd20c406d92ca4f44b99ae64bb8c6ce4303d7780d5f378e36ac73a7d8"
+      "sha256": "9c8bea174f8d3d737f2c9826244ff498ed9a58f98d82323582894123b91f1330"
     },
     {
       "path": "docs/product/twin-campaigns.md",
-      "sha256": "ea9b3309356aae0f438802d738e1960e1513135c63075d4c8b27b8a1c0e97d40"
+      "sha256": "6d3d4c555dca35b62c3ddd465989b1ef31b16042077fcde8f30ffd1cd5420489"
     },
     {
       "path": "index.html",
-      "sha256": "3436377a8d3205b45eb5d105312f2c419ebdba074d84e3e77a4b0a3903070af4"
+      "sha256": "3ea13709b7d116c0dee888966a1e89a57da1f878acf69b512d77ad85b2b0c246"
     },
     {
       "path": "package-lock.json",
-      "sha256": "ae19a9ce24494b0771cbd704720076f2b517a55567d8798656e054ad86a7fc80"
+      "sha256": "2cf50d7006935f6912580e2c4baeb7e7dacd08c0646c061341fd5155d28a2d49"
     },
     {
       "path": "package.json",
-      "sha256": "59eb616ec1d18d22b6f23d36bcbde3795526cbbc20c35c9f0cd4901f34c3f1d6"
+      "sha256": "e5d04338957610409146952101dbf23f47d8e92a8400ee675bba1ca554ad236e"
     },
     {
       "path": "src/app.js",
-      "sha256": "9219257810e91a8206b5a9ca200deede6c2eaa9548425b80973375ad5b74245f"
+      "sha256": "e2e1a5aedfab0bcb05ed35dea96b2d309a32530211dbd3732e977b66d49beca0"
+    },
+    {
+      "path": "src/archipelago-scene.js",
+      "sha256": "9bc6330c044ba9a34428a3e0b87dc0fe8d1ef962d586b2497c163bfdd64f6bc9"
     },
     {
       "path": "src/campaign-brand.js",
-      "sha256": "d75d1c37b0e6fa9e58b3d2d7a08042817cc678f536a8f5a52a28df3df30d2a4e"
+      "sha256": "183d12b04dc60798c65b51c69dc48dd9aeb2961ce43950a302241923e5de6cad"
     },
     {
       "path": "src/campaign-double11.js",
-      "sha256": "fa6980ab98c1504cf46f17fba133ed77a1ed011f672583dde601fae8a79d935b"
+      "sha256": "b167df024ed679392060ad5bbddbb7ef0413f0aad3be84c35adb6d15d9989f5e"
     },
     {
       "path": "src/campaign-question.js",
@@ -186,11 +202,11 @@
     },
     {
       "path": "src/campaigns-ui.js",
-      "sha256": "01c6fb588501bb99ab7ab5a6371718b671f2db55a2ef4f24d35a518af05d3e34"
+      "sha256": "163d7470c9e5baef6996dc395766d320a5765b07c976aa6c443b772595a8aefc"
     },
     {
       "path": "src/campaigns.css",
-      "sha256": "ff7f43438060c66c87287a298c204e7fb37957de58eb40f046864a517494801f"
+      "sha256": "ccde5adad4c1fdfa6398d01555b34a8b3b00585ab8b196b0e647f82658f99cfe"
     },
     {
       "path": "src/curriculum.js",
@@ -199,6 +215,10 @@
     {
       "path": "src/island-scene.js",
       "sha256": "dd0bd0f3bcb2dbfc3ed4227be28601b8504c63bc82f0592a4421012280b00a55"
+    },
+    {
+      "path": "src/journey.js",
+      "sha256": "9148380e7ae46104d437fdfb70bdc8eaad578b6278332040a6da8278d28985d6"
     },
     {
       "path": "src/real-case-lessons.js",
@@ -245,6 +265,10 @@
       "sha256": "9446618a056f909fe63ef1f7ef794f6a7b2a0740126731bde82d8d17c5e8afa2"
     },
     {
+      "path": "tests/journey.test.mjs",
+      "sha256": "a7e20e746099b7be8a7ab141d4524f3db2eafa59f311fbfbb2b57247e6271d93"
+    },
+    {
       "path": "tests/runner.test.mjs",
       "sha256": "ea837a65f3d88f0475697fd002485f0891c958101a96479c85aaf5729e4f237d"
     },
@@ -257,6 +281,14 @@
       "sha256": "0d40686df68fe0f022a78aee45d50192b7e4ce4f6efbe682fb183763cbc474b6"
     },
     {
+      "path": "tools/check-archipelago.mjs",
+      "sha256": "54d786a523b3142aeaef6abf23538ea6c171abe4ee3ec5ab0bb024af67bf7e6d"
+    },
+    {
+      "path": "tools/check-journey.mjs",
+      "sha256": "4c1d9e5f4ab33ebe999e4fef297a8a61afa816dffff2cbcff4d3bc155ef1ec6f"
+    },
+    {
       "path": "tools/check-labels.mjs",
       "sha256": "ce795e8f79629b43ca017e386a41325d99f876f1e479c21c95b5476af3cf958b"
     },
@@ -266,19 +298,19 @@
     },
     {
       "path": "tools/check-twin-layout.mjs",
-      "sha256": "fca9be731516e3271c47dfe887c9b37cb777818c09fc17971d59aba6c31e21ce"
+      "sha256": "470b1ba4afc66841ba8bb237ad8cc4562bac39a2070600548d3ad8fe38dfa6c7"
     },
     {
       "path": "tools/check-twin-quota.mjs",
-      "sha256": "81a82e8c86e883b79c4963d25fb54ff161a933356439ad3b9724bb59f5bac67a"
+      "sha256": "bbeb588d0547e50ae81fed7e0b59f46caff1340e10a7d7737f2ddc954a99eecc"
     },
     {
       "path": "tools/check-twin-recovery.mjs",
-      "sha256": "adac8fec4f26cf716bfe1024e76196c6ab20eac018cbd9c7af2d781fafdbcb9e"
+      "sha256": "ae5dfca8cdf5e691a51030897cc5e09f27d200efd8ef156d9584f961bcd08d23"
     },
     {
       "path": "tools/check-twin.mjs",
-      "sha256": "c50bccc6869cb6270cf51b0f70ddd5800e438bc84f59a0d3ffc21e2c4c9431ee"
+      "sha256": "df80886f5b854ab3c671945f201076d77c9363dbbc138d0ed2a4a5a2ab01f4df"
     },
     {
       "path": "tools/check-visual.mjs",
@@ -289,8 +321,12 @@
       "sha256": "ab9f7c44483cee216ff2f94a14ad6340b60dd9af8dca41ed989dcb191dbac953"
     },
     {
+      "path": "tools/compose-browser-check.mjs",
+      "sha256": "364c224fd390012696088edccf9558dc82e83a640568549b1fb06269b48d26b7"
+    },
+    {
       "path": "tools/export-public.mjs",
-      "sha256": "0400f960ed17a5fe72e3abd471ceb7abd78520fd1612466073dcd09b3cd3781d"
+      "sha256": "7d7b0f52fd0d52a22bc52e3e6cb8d51d9c459912fbd3ff9e1e058ed1664bcc6e"
     },
     {
       "path": "tools/server.mjs",

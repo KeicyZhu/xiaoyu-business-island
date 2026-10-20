@@ -3,6 +3,7 @@ async function checkTwinLayout(page) {
   page.on("pageerror", (e) => problems.push(e.message));
   page.setDefaultTimeout(60000);
   await page.goto("http://127.0.0.1:4173/");
+  await prepareLearningFixture(page);
   await page.emulateMedia({ reducedMotion: "reduce" });
   for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: width > 700 ? 1000 : 844 });
@@ -12,7 +13,7 @@ async function checkTwinLayout(page) {
       .click({ noWaitAfter: true });
     await page.waitForFunction(
       () =>
-        document.querySelectorAll(".campaign-scene.scene-ready").length === 2,
+        document.querySelectorAll(".archipelago-scene.archipelago-ready").length === 1,
       {},
       { timeout: 60000 },
     );

@@ -342,5 +342,22 @@
         "url": "https://www.sba.gov/counseling/manage-your-business/"
       }
     }
-  ]
+  ],
+  "journey": {
+    "entry": "学习岛",
+    "practice_after_completed_chapters": 11,
+    "branches": [
+      {
+        "id": "double11",
+        "name": "跨境电商双十一实战",
+        "stages": 8
+      },
+      {
+        "id": "brand",
+        "name": "品牌出海实战",
+        "stages": 8
+      }
+    ],
+    "branch_order": "independent"
+  }
 }

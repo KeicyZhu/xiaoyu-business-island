@@ -4,7 +4,7 @@ import { single, multi, numeric, order } from "./campaign-question.js";
 // Country-specific requirements are evidence gates, not a declaration of market eligibility.
 export const brandCampaign = {
   id: "brand",
-  title: "蟹黄酱出海岛",
+  title: "品牌出海实战",
   role: "品牌GTM负责人",
   subtitle: "带一家中国蟹黄酱品牌走完市场选择、产品验证、渠道收款与首销复盘。",
   initial: { budget: 60, readiness: 20, trust: 60 },

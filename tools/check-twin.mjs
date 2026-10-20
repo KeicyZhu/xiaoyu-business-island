@@ -4,12 +4,13 @@ async function checkTwin(page) {
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("http://127.0.0.1:4173/");
+  await prepareLearningFixture(page);
   await page.evaluate(() => localStorage.removeItem("xiaoyu-twin-campaign-v1"));
   await page.reload();
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.waitForFunction(
-    () => document.querySelectorAll(".campaign-scene.scene-ready").length === 2,
+    () => document.querySelectorAll(".archipelago-scene.archipelago-ready").length === 1,
   );
   const tracks = await page.evaluate(
     async () => (await import("./src/campaigns-data.js")).campaigns,
@@ -69,7 +70,7 @@ async function checkTwin(page) {
     await click('[data-c-act="home"]');
     await page.waitForFunction(
       () =>
-        document.querySelectorAll(".campaign-scene.scene-ready").length === 2,
+        document.querySelectorAll(".archipelago-scene.archipelago-ready").length === 1,
       {},
       { timeout: 90000 },
     );

@@ -3,6 +3,7 @@ async function checkTwinRecovery(page) {
   const scratch = await page.context().newPage();
   try {
     await scratch.goto("http://127.0.0.1:4173/");
+    await prepareLearningFixture(scratch);
     await scratch.evaluate(() =>
       localStorage.setItem("xiaoyu-twin-campaign-v1", '{"broken":true}'),
     );

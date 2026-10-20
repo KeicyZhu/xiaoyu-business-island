@@ -4,7 +4,7 @@ import { single, multi, numeric, order } from "./campaign-question.js";
 // DNC/MAC below are explicit teaching definitions, not TikTok internal metric definitions.
 export const double11Campaign = {
   id: "double11",
-  title: "TikTok Shop 用户增长岛",
+  title: "跨境电商双十一实战",
   role: "用户增长产品经理",
   subtitle: "在双十一场景中完成分层、拉新、激活、留存、召回与增量复盘",
   initial: { budget: 120, readiness: 30, trust: 60 },
